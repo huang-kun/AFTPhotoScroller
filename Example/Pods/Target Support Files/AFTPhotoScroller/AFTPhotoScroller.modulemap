@@ -1,0 +1,6 @@
+framework module AFTPhotoScroller {
+  umbrella header "AFTPhotoScroller-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2EE91BC999CCA51E275C6321 /* AFTPhotoScroller.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = AFTPhotoScroller.podspec; path = ../AFTPhotoScroller.podspec; sourceTree = "<group>"; };
+		2EE91BC999CCA51E275C6321 /* AFTPhotoScroller.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AFTPhotoScroller.podspec; path = ../AFTPhotoScroller.podspec; sourceTree = "<group>"; };
 		3DA2CB8325B649BAB9300A63 /* Pods-AFTPhotoScroller_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFTPhotoScroller_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AFTPhotoScroller_Example/Pods-AFTPhotoScroller_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		44E66AA4D11C4EB2D5786C6F /* Pods-AFTPhotoScroller_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFTPhotoScroller_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AFTPhotoScroller_Tests/Pods-AFTPhotoScroller_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* AFTPhotoScroller_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFTPhotoScroller_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,9 +62,9 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7CD8D77A382D733680D009EC /* Pods-AFTPhotoScroller_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFTPhotoScroller_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-AFTPhotoScroller_Example/Pods-AFTPhotoScroller_Example.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9E977B8FADBB1DAB7E5AEA19 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		9E977B8FADBB1DAB7E5AEA19 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A0906B33D7A7FFDDF9986849 /* Pods-AFTPhotoScroller_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFTPhotoScroller_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AFTPhotoScroller_Tests/Pods-AFTPhotoScroller_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B2E682F1750C81706707D464 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B2E682F1750C81706707D464 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DDA871FEA5F0865CD26F8997 /* Pods_AFTPhotoScroller_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AFTPhotoScroller_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E03C2368BFF643D16F14D1D2 /* Pods_AFTPhotoScroller_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AFTPhotoScroller_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -251,6 +251,7 @@
 				ORGANIZATIONNAME = huangkun;
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
+						LastSwiftMigration = 0820;
 						TestTargetID = 6003F589195388D20070C39A;
 					};
 				};
@@ -568,6 +569,7 @@
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AFTPhotoScroller_Example.app/AFTPhotoScroller_Example";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -588,6 +590,7 @@
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AFTPhotoScroller_Example.app/AFTPhotoScroller_Example";
 				WRAPPER_EXTENSION = xctest;
 			};

@@ -1,0 +1,23 @@
+PODS:
+  - AFTPhotoScroller (0.1.0)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+
+DEPENDENCIES:
+  - AFTPhotoScroller (from `../`)
+  - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  AFTPhotoScroller:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AFTPhotoScroller: b67b01c4398136b1edc544c2c32f50a81b7704ab
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+
+PODFILE CHECKSUM: 59deb3bb68d2219816a0567fb3cfe07b4f9c5167
+
+COCOAPODS: 1.1.1
