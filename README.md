@@ -43,7 +43,7 @@ There are a lot of control flows for you to customize:
 
 ## Demo
 
-First, import <AFTPhotoScroller/AFTPagingScrollView.h>
+First, `#import <AFTPhotoScroller/AFTPagingScrollView.h>`
 
 In your `UIViewController` subclass, you can simply just do this.
 

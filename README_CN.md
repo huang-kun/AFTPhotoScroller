@@ -43,7 +43,7 @@ Check out [English README](https://github.com/huang-kun/AFTPhotoScroller/blob/ma
 
 ## 示例
 
-首先，import <AFTPhotoScroller/AFTPagingScrollView.h>
+首先，`#import <AFTPhotoScroller/AFTPagingScrollView.h>`
 
 在`UIViewController`子类中，只需要简单的加入以下代码即可：
 
