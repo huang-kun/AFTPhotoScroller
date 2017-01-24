@@ -7,23 +7,89 @@
 //
 
 #import "AFTViewController.h"
+#import "AFTPagingBaseViewController.h"
 
-@interface AFTViewController ()
-
+@interface AFTViewController () <UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, strong) UITableView *tableView;
 @end
 
 @implementation AFTViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.title = @"AFTPhotoScrollerDemo";
+    
+    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    [_tableView registerClass:UITableViewCell.self forCellReuseIdentifier:@"Cell"];
+
+    [self.view addSubview:_tableView];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.items.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    cell.textLabel.text = self.items[indexPath.row];
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *name = self.itemClasses[indexPath.row];
+    NSString *title = self.items[indexPath.row];
+    
+    Class cls = NSClassFromString(name);
+    if (!cls) {
+        return;
+    }
+    
+    AFTPagingBaseViewController *vc = [cls new];
+    if ([vc isKindOfClass:AFTPagingBaseViewController.self]) {
+        AFTPagingBaseViewController *bvc = (AFTPagingBaseViewController *)vc;
+        bvc.title = title;
+        bvc.images = self.landscapeImages;
+        [self presentViewController:bvc animated:YES completion:nil];
+    }
+}
+
+#pragma mark - Helper
+
+- (NSArray *)items {
+    return @[ @"Normal pages",
+              @"Vertical pages",
+              @"Custom pages",
+              @"Parallax pages" ];
+}
+
+- (NSArray *)itemClasses {
+    return @[ @"AFTNormalPagingViewController",
+              @"AFTVerticalPagingViewController",
+              @"AFTCustomPagingViewController",
+              @"AFTParallaxPagingViewController" ];
+}
+
+- (NSArray *)landscapeImages {
+    NSMutableArray *images = [NSMutableArray new];
+    for (int i = 0; i < 14; i++) {
+        NSString *name = [NSString stringWithFormat:@"image%03d", i];
+        NSString *path = [NSBundle.mainBundle pathForResource:name ofType:@"jpg"];
+        UIImage *image = [UIImage imageWithContentsOfFile:path];
+        [images addObject:image];
+    }
+    return images.copy;
 }
 
 @end
