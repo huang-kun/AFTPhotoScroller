@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AFE910D1E360A9000AD5743 /* image000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE90FF1E360A9000AD5743 /* image000.jpg */; };
+		1AFE910E1E360A9000AD5743 /* image001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE91001E360A9000AD5743 /* image001.jpg */; };
+		1AFE910F1E360A9000AD5743 /* image002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE91011E360A9000AD5743 /* image002.jpg */; };
+		1AFE91101E360A9000AD5743 /* image003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE91021E360A9000AD5743 /* image003.jpg */; };
+		1AFE91111E360A9000AD5743 /* image004.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE91031E360A9000AD5743 /* image004.jpg */; };
+		1AFE91121E360A9000AD5743 /* image005.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE91041E360A9000AD5743 /* image005.jpg */; };
+		1AFE91131E360A9000AD5743 /* image006.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE91051E360A9000AD5743 /* image006.jpg */; };
+		1AFE91141E360A9000AD5743 /* image007.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE91061E360A9000AD5743 /* image007.jpg */; };
+		1AFE91151E360A9000AD5743 /* image008.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE91071E360A9000AD5743 /* image008.jpg */; };
+		1AFE91161E360A9000AD5743 /* image009.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE91081E360A9000AD5743 /* image009.jpg */; };
+		1AFE91171E360A9000AD5743 /* image010.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE91091E360A9000AD5743 /* image010.jpg */; };
+		1AFE91181E360A9000AD5743 /* image011.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE910A1E360A9000AD5743 /* image011.jpg */; };
+		1AFE91191E360A9000AD5743 /* image012.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE910B1E360A9000AD5743 /* image012.jpg */; };
+		1AFE911A1E360A9000AD5743 /* image013.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE910C1E360A9000AD5743 /* image013.jpg */; };
+		1AFE91211E362D0500AD5743 /* AFTNormalPagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE91201E362D0500AD5743 /* AFTNormalPagingViewController.m */; };
+		1AFE91241E362FE600AD5743 /* AFTVerticalPagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE91231E362FE600AD5743 /* AFTVerticalPagingViewController.m */; };
+		1AFE91271E36309600AD5743 /* AFTCustomPagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE91261E36309600AD5743 /* AFTCustomPagingViewController.m */; };
+		1AFE912A1E3630AA00AD5743 /* AFTParallaxPagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE91291E3630AA00AD5743 /* AFTParallaxPagingViewController.m */; };
+		1AFE912D1E3631EC00AD5743 /* AFTPagingBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE912C1E3631EC00AD5743 /* AFTPagingBaseViewController.m */; };
+		1AFE91331E36330D00AD5743 /* AFTNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE91301E36330D00AD5743 /* AFTNavigationBar.m */; };
+		1AFE91341E36330D00AD5743 /* AFTPushAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE91321E36330D00AD5743 /* AFTPushAnimatedTransitioning.m */; };
+		1AFE91381E36377D00AD5743 /* AFTPageBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE91371E36377D00AD5743 /* AFTPageBar.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -37,6 +59,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1AFE90FF1E360A9000AD5743 /* image000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image000.jpg; sourceTree = "<group>"; };
+		1AFE91001E360A9000AD5743 /* image001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image001.jpg; sourceTree = "<group>"; };
+		1AFE91011E360A9000AD5743 /* image002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image002.jpg; sourceTree = "<group>"; };
+		1AFE91021E360A9000AD5743 /* image003.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image003.jpg; sourceTree = "<group>"; };
+		1AFE91031E360A9000AD5743 /* image004.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image004.jpg; sourceTree = "<group>"; };
+		1AFE91041E360A9000AD5743 /* image005.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image005.jpg; sourceTree = "<group>"; };
+		1AFE91051E360A9000AD5743 /* image006.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image006.jpg; sourceTree = "<group>"; };
+		1AFE91061E360A9000AD5743 /* image007.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image007.jpg; sourceTree = "<group>"; };
+		1AFE91071E360A9000AD5743 /* image008.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image008.jpg; sourceTree = "<group>"; };
+		1AFE91081E360A9000AD5743 /* image009.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image009.jpg; sourceTree = "<group>"; };
+		1AFE91091E360A9000AD5743 /* image010.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image010.jpg; sourceTree = "<group>"; };
+		1AFE910A1E360A9000AD5743 /* image011.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image011.jpg; sourceTree = "<group>"; };
+		1AFE910B1E360A9000AD5743 /* image012.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image012.jpg; sourceTree = "<group>"; };
+		1AFE910C1E360A9000AD5743 /* image013.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image013.jpg; sourceTree = "<group>"; };
+		1AFE911F1E362D0500AD5743 /* AFTNormalPagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFTNormalPagingViewController.h; sourceTree = "<group>"; };
+		1AFE91201E362D0500AD5743 /* AFTNormalPagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFTNormalPagingViewController.m; sourceTree = "<group>"; };
+		1AFE91221E362FE600AD5743 /* AFTVerticalPagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFTVerticalPagingViewController.h; sourceTree = "<group>"; };
+		1AFE91231E362FE600AD5743 /* AFTVerticalPagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFTVerticalPagingViewController.m; sourceTree = "<group>"; };
+		1AFE91251E36309600AD5743 /* AFTCustomPagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFTCustomPagingViewController.h; sourceTree = "<group>"; };
+		1AFE91261E36309600AD5743 /* AFTCustomPagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFTCustomPagingViewController.m; sourceTree = "<group>"; };
+		1AFE91281E3630AA00AD5743 /* AFTParallaxPagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFTParallaxPagingViewController.h; sourceTree = "<group>"; };
+		1AFE91291E3630AA00AD5743 /* AFTParallaxPagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFTParallaxPagingViewController.m; sourceTree = "<group>"; };
+		1AFE912B1E3631EC00AD5743 /* AFTPagingBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFTPagingBaseViewController.h; sourceTree = "<group>"; };
+		1AFE912C1E3631EC00AD5743 /* AFTPagingBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFTPagingBaseViewController.m; sourceTree = "<group>"; };
+		1AFE912F1E36330D00AD5743 /* AFTNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFTNavigationBar.h; sourceTree = "<group>"; };
+		1AFE91301E36330D00AD5743 /* AFTNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFTNavigationBar.m; sourceTree = "<group>"; };
+		1AFE91311E36330D00AD5743 /* AFTPushAnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFTPushAnimatedTransitioning.h; sourceTree = "<group>"; };
+		1AFE91321E36330D00AD5743 /* AFTPushAnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFTPushAnimatedTransitioning.m; sourceTree = "<group>"; };
+		1AFE91361E36377D00AD5743 /* AFTPageBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFTPageBar.h; sourceTree = "<group>"; };
+		1AFE91371E36377D00AD5743 /* AFTPageBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFTPageBar.m; sourceTree = "<group>"; };
 		2EE91BC999CCA51E275C6321 /* AFTPhotoScroller.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AFTPhotoScroller.podspec; path = ../AFTPhotoScroller.podspec; sourceTree = "<group>"; };
 		3DA2CB8325B649BAB9300A63 /* Pods-AFTPhotoScroller_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFTPhotoScroller_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AFTPhotoScroller_Example/Pods-AFTPhotoScroller_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		44E66AA4D11C4EB2D5786C6F /* Pods-AFTPhotoScroller_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFTPhotoScroller_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AFTPhotoScroller_Tests/Pods-AFTPhotoScroller_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +147,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AFE90FE1E360A9000AD5743 /* Sample Images */ = {
+			isa = PBXGroup;
+			children = (
+				1AFE90FF1E360A9000AD5743 /* image000.jpg */,
+				1AFE91001E360A9000AD5743 /* image001.jpg */,
+				1AFE91011E360A9000AD5743 /* image002.jpg */,
+				1AFE91021E360A9000AD5743 /* image003.jpg */,
+				1AFE91031E360A9000AD5743 /* image004.jpg */,
+				1AFE91041E360A9000AD5743 /* image005.jpg */,
+				1AFE91051E360A9000AD5743 /* image006.jpg */,
+				1AFE91061E360A9000AD5743 /* image007.jpg */,
+				1AFE91071E360A9000AD5743 /* image008.jpg */,
+				1AFE91081E360A9000AD5743 /* image009.jpg */,
+				1AFE91091E360A9000AD5743 /* image010.jpg */,
+				1AFE910A1E360A9000AD5743 /* image011.jpg */,
+				1AFE910B1E360A9000AD5743 /* image012.jpg */,
+				1AFE910C1E360A9000AD5743 /* image013.jpg */,
+			);
+			path = "Sample Images";
+			sourceTree = "<group>";
+		};
+		1AFE911E1E362C3B00AD5743 /* AFTPageViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1AFE912B1E3631EC00AD5743 /* AFTPagingBaseViewController.h */,
+				1AFE912C1E3631EC00AD5743 /* AFTPagingBaseViewController.m */,
+				1AFE911F1E362D0500AD5743 /* AFTNormalPagingViewController.h */,
+				1AFE91201E362D0500AD5743 /* AFTNormalPagingViewController.m */,
+				1AFE91221E362FE600AD5743 /* AFTVerticalPagingViewController.h */,
+				1AFE91231E362FE600AD5743 /* AFTVerticalPagingViewController.m */,
+				1AFE91251E36309600AD5743 /* AFTCustomPagingViewController.h */,
+				1AFE91261E36309600AD5743 /* AFTCustomPagingViewController.m */,
+				1AFE91281E3630AA00AD5743 /* AFTParallaxPagingViewController.h */,
+				1AFE91291E3630AA00AD5743 /* AFTParallaxPagingViewController.m */,
+			);
+			path = AFTPageViewControllers;
+			sourceTree = "<group>";
+		};
+		1AFE912E1E36330D00AD5743 /* AFTNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				1AFE912F1E36330D00AD5743 /* AFTNavigationBar.h */,
+				1AFE91301E36330D00AD5743 /* AFTNavigationBar.m */,
+				1AFE91311E36330D00AD5743 /* AFTPushAnimatedTransitioning.h */,
+				1AFE91321E36330D00AD5743 /* AFTPushAnimatedTransitioning.m */,
+			);
+			path = AFTNavigation;
+			sourceTree = "<group>";
+		};
+		1AFE91351E36377500AD5743 /* AFTPageBar */ = {
+			isa = PBXGroup;
+			children = (
+				1AFE91361E36377D00AD5743 /* AFTPageBar.h */,
+				1AFE91371E36377D00AD5743 /* AFTPageBar.m */,
+			);
+			path = AFTPageBar;
+			sourceTree = "<group>";
+		};
 		231BF8B0BA6362C19FF98B95 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,8 +258,12 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* AFTViewController.h */,
 				6003F5A6195388D20070C39A /* AFTViewController.m */,
+				1AFE91351E36377500AD5743 /* AFTPageBar */,
+				1AFE912E1E36330D00AD5743 /* AFTNavigation */,
+				1AFE911E1E362C3B00AD5743 /* AFTPageViewControllers */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
+				1AFE90FE1E360A9000AD5743 /* Sample Images */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
 			name = "Example for AFTPhotoScroller";
@@ -250,6 +364,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = huangkun;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = CD76TM5QAC;
+					};
 					6003F5AD195388D20070C39A = {
 						LastSwiftMigration = 0820;
 						TestTargetID = 6003F589195388D20070C39A;
@@ -280,10 +397,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AFE91181E360A9000AD5743 /* image011.jpg in Resources */,
+				1AFE91191E360A9000AD5743 /* image012.jpg in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				1AFE91101E360A9000AD5743 /* image003.jpg in Resources */,
+				1AFE91171E360A9000AD5743 /* image010.jpg in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				1AFE910F1E360A9000AD5743 /* image002.jpg in Resources */,
+				1AFE910D1E360A9000AD5743 /* image000.jpg in Resources */,
+				1AFE911A1E360A9000AD5743 /* image013.jpg in Resources */,
+				1AFE91141E360A9000AD5743 /* image007.jpg in Resources */,
+				1AFE91131E360A9000AD5743 /* image006.jpg in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				1AFE91161E360A9000AD5743 /* image009.jpg in Resources */,
+				1AFE91121E360A9000AD5743 /* image005.jpg in Resources */,
+				1AFE910E1E360A9000AD5743 /* image001.jpg in Resources */,
+				1AFE91111E360A9000AD5743 /* image004.jpg in Resources */,
+				1AFE91151E360A9000AD5743 /* image008.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,8 +527,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* AFTAppDelegate.m in Sources */,
+				1AFE91271E36309600AD5743 /* AFTCustomPagingViewController.m in Sources */,
+				1AFE91341E36330D00AD5743 /* AFTPushAnimatedTransitioning.m in Sources */,
 				6003F5A7195388D20070C39A /* AFTViewController.m in Sources */,
+				1AFE91381E36377D00AD5743 /* AFTPageBar.m in Sources */,
+				1AFE912D1E3631EC00AD5743 /* AFTPagingBaseViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				1AFE912A1E3630AA00AD5743 /* AFTParallaxPagingViewController.m in Sources */,
+				1AFE91241E362FE600AD5743 /* AFTVerticalPagingViewController.m in Sources */,
+				1AFE91331E36330D00AD5743 /* AFTNavigationBar.m in Sources */,
+				1AFE91211E362D0500AD5743 /* AFTNormalPagingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,9 +664,11 @@
 			baseConfigurationReference = 3DA2CB8325B649BAB9300A63 /* Pods-AFTPhotoScroller_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CD76TM5QAC;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AFTPhotoScroller/AFTPhotoScroller-Prefix.pch";
 				INFOPLIST_FILE = "AFTPhotoScroller/AFTPhotoScroller-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -540,9 +681,11 @@
 			baseConfigurationReference = 7CD8D77A382D733680D009EC /* Pods-AFTPhotoScroller_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CD76TM5QAC;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AFTPhotoScroller/AFTPhotoScroller-Prefix.pch";
 				INFOPLIST_FILE = "AFTPhotoScroller/AFTPhotoScroller-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

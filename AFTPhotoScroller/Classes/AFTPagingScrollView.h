@@ -79,9 +79,20 @@ typedef NS_ENUM(NSInteger, AFTPagingScrollViewNavigationOrientation) {
 
 /**
  Tells the delegate that when the imageScrollView enables a double-tap-to-zoom gesture for its imageView. Using this callback method for additional setup, e.g. [singleTap requireGestureRecognizerToFail:zoomingTap] (创建了双击缩放图片手势的回调，这里可以用于一些附加操作，比如调用-requireGestureRecognizerToFail:)
+ 
  @param imageScrollView The inner scroll view which handles the image zooming.
+ @param zoomingTap A double tap gesture for handle image zooming.
  */
 - (void)pagingScrollView:(AFTPagingScrollView *)pagingScrollView imageScrollView:(UIScrollView *)imageScrollView didEnableZoomingTapGesture:(UITapGestureRecognizer *)zoomingTap;
+
+/**
+ Tells the delegate that when a double tap to zoom image gesture is recognized.
+
+ @param imageScrollView The inner scroll view which handles the image zooming.
+ @param zoomingTap A double tap gesture for handle image zooming.
+ */
+- (void)pagingScrollView:(AFTPagingScrollView *)pagingScrollView imageScrollView:(UIScrollView *)imageScrollView didRecognizeZoomingTapGesture:(UITapGestureRecognizer *)zoomingTap;
+
 
 @end
 
@@ -150,6 +161,24 @@ typedef NS_ENUM(NSInteger, AFTPagingScrollViewNavigationOrientation) {
  @note This method will build user interface from scratch and call all required methods in AFTPagingScrollViewDataSource.
  */
 - (void)reloadData;
+
+/**
+ Save current page and zooming states for device rotation.
+ @note You can call it in UIViewController's -willRotateToInterfaceOrientation:duration: or -willTransitionToTraitCollection:withTransitionCoordinator:
+ */
+- (void)saveCurrentStatesForRotation;
+
+/**
+ Apply tracked informations for device rotation.
+ @note You can call it in UIViewController's -willAnimateRotationToInterfaceOrientation:duration:
+ */
+- (void)restoreStatesForRotation;
+
+/**
+ Same as -restoreStatesForRotation.
+ @note You can pass size from in UIViewController's -viewWillTransitionToSize:withTransitionCoordinator:
+ */
+- (void)restoreStatesForRotationInSize:(CGSize)size;
 
 @end
 

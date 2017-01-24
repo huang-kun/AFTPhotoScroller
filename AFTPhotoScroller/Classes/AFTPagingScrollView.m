@@ -38,25 +38,50 @@
     CGPoint _lastContentOffset;
     BOOL _firstTimeLoadPage;
     
+    NSInteger _firstVisiblePageIndexBeforeRotation;
+    CGFloat _percentScrolledIntoFirstVisiblePage;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor blackColor];
-        
-        _recycledPages = [[NSMutableSet alloc] init];
-        _visiblePages  = [[NSMutableSet alloc] init];
-        _imageCache = [[NSMutableDictionary alloc] init];
-        
-        _firstTimeLoadPage = YES;
-        _lastContentOffset = CGPointZero;
-        
-        _maximumImageZoomScale = 1.0;
-        _zoomingTapEnabled = YES;
-        _zoomingTapProgress = 1.0;
+        [self setup];
     }
     return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self setup];
+    }
+    return self;
+}
+
+- (void)setup {
+    self.backgroundColor = [UIColor blackColor];
+    
+    _recycledPages = [[NSMutableSet alloc] init];
+    _visiblePages  = [[NSMutableSet alloc] init];
+    _imageCache = [[NSMutableDictionary alloc] init];
+    
+    _firstTimeLoadPage = YES;
+    _lastContentOffset = CGPointZero;
+    
+    _maximumImageZoomScale = 1.0;
+    _zoomingTapEnabled = YES;
+    _zoomingTapProgress = 1.0;
+    
+    [NSNotificationCenter.defaultCenter addObserver:self
+                                           selector:@selector(removeImageCache)
+                                               name:UIApplicationDidReceiveMemoryWarningNotification
+                                             object:UIApplication.sharedApplication];
+}
+
+- (void)dealloc {
+    [NSNotificationCenter.defaultCenter removeObserver:self
+                                                  name:UIApplicationDidReceiveMemoryWarningNotification
+                                                object:UIApplication.sharedApplication];
 }
 
 #pragma mark - Accessors
@@ -521,6 +546,10 @@
     
 }
 
+- (void)removeImageCache {
+    [_imageCache removeAllObjects];
+}
+
 #pragma mark - Parallax Scrolling
 
 - (void)applyParallaxScrollingEffect {
@@ -548,6 +577,55 @@
     }
     
     _parallaxSeparatorView.frame = parallaxSeparatorFrame;
+}
+
+#pragma mark - Rotation
+
+- (void)saveCurrentStatesForRotation {
+    CGFloat offset = _pagingScrollView.contentOffset.x;
+    CGFloat pageWidth = _pagingScrollView.bounds.size.width;
+    
+    if (offset >= 0) {
+        _firstVisiblePageIndexBeforeRotation = floorf(offset / pageWidth);
+        _percentScrolledIntoFirstVisiblePage = (offset - (_firstVisiblePageIndexBeforeRotation * pageWidth)) / pageWidth;
+    } else {
+        _firstVisiblePageIndexBeforeRotation = 0;
+        _percentScrolledIntoFirstVisiblePage = offset / pageWidth;
+    }
+}
+
+- (void)restoreStatesForRotation {
+    // recalculate contentSize based on current orientation
+    CGRect pagingScrollViewFrame = [self frameForPagingScrollView];
+    _pagingScrollView.frame = pagingScrollViewFrame;
+    _pagingScrollView.contentSize = [self contentSizeForPagingScrollView];
+    
+    // adjust frames and configuration of each visible page
+    for (AFTImageScrollView *page in _visiblePages) {
+        CGPoint restorePoint = [page pointToCenterAfterRotation];
+        CGFloat restoreScale = [page scaleToRestoreAfterRotation];
+        page.frame = [self frameForPageAtIndex:page.pageIndex];
+        [page setMaxMinZoomScalesForCurrentBounds];
+        [page restoreCenterPoint:restorePoint scale:restoreScale];
+    }
+    
+    // adjust contentOffset to preserve page location based on values collected prior to location
+    CGFloat pageWidth = _pagingScrollView.bounds.size.width;
+    CGFloat newOffset = (_firstVisiblePageIndexBeforeRotation * pageWidth) + (_percentScrolledIntoFirstVisiblePage * pageWidth);
+    _pagingScrollView.contentOffset = CGPointMake(newOffset, 0);
+}
+
+- (void)restoreStatesForRotationInSize:(CGSize)size {
+    CGRect bounds = self.bounds;
+    if (bounds.size.width != size.width || bounds.size.height != size.height) {
+        bounds.size.width = size.width;
+        bounds.size.height = size.height;
+        
+        self.bounds = bounds;
+        _pagingScrollView.bounds = bounds;
+        
+        [self restoreStatesForRotation];
+    }
 }
 
 @end

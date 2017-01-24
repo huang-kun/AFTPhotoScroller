@@ -217,6 +217,10 @@
 }
 
 - (void)handleZoomingTap:(UITapGestureRecognizer *)tap {
+    if ([_pagingScrollView.delegate respondsToSelector:@selector(pagingScrollView:imageScrollView:didRecognizeZoomingTapGesture:)]) {
+        [_pagingScrollView.delegate pagingScrollView:_pagingScrollView imageScrollView:self didRecognizeZoomingTapGesture:tap];
+    }
+    
     CGPoint location = [tap locationInView:tap.view];
     [self zoomToCenter:location animated:YES];
 }

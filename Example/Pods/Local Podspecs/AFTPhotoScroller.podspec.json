@@ -1,9 +1,9 @@
 {
   "name": "AFTPhotoScroller",
   "version": "0.1.0",
-  "summary": "A short description of AFTPhotoScroller.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/AFTPhotoScroller",
+  "summary": "A simple photo scrolling view using like iOS photo app.",
+  "description": "This photo scrolling view can provide features such as:\n1. Controller free.\n2. Both horizontal and vertical page scrolling.\n3. Parallax Scrolling Support.",
+  "homepage": "https://github.com/huang-kun/AFTPhotoScroller",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,12 @@
     "huangkun": "jack-huang-developer@foxmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/AFTPhotoScroller.git",
+    "git": "https://github.com/huang-kun/AFTPhotoScroller.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://weibo.com/u/5736413097",
   "platforms": {
-    "ios": "8.0"
+    "ios": "6.0"
   },
   "source_files": "AFTPhotoScroller/Classes/**/*"
 }
