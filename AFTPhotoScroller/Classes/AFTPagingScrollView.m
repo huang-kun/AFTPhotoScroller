@@ -295,7 +295,7 @@
             [page removeFromSuperview];
             
             if ([_delegate respondsToSelector:@selector(pagingScrollView:imageScrollView:didRecycleForPageIndex:)]) {
-                [_delegate pagingScrollView:self imageScrollView:page didRecycleForPageIndex:index];
+                [_delegate pagingScrollView:self imageScrollView:page didRecycleForPageIndex:page.pageIndex];
             }
         }
     }
@@ -313,7 +313,7 @@
             [_visiblePages addObject:page];
             
             if ([_delegate respondsToSelector:@selector(pagingScrollView:imageScrollView:didReuseForPageIndex:)]) {
-                [_delegate pagingScrollView:self imageScrollView:page didReuseForPageIndex:index];
+                [_delegate pagingScrollView:self imageScrollView:page didReuseForPageIndex:page.pageIndex];
             }
             
             if (_parallaxScrollingEnabled) {
@@ -350,7 +350,7 @@
             [page removeFromSuperview];
             
             if ([_delegate respondsToSelector:@selector(pagingScrollView:imageScrollView:didRecycleForPageIndex:)]) {
-                [_delegate pagingScrollView:self imageScrollView:page didRecycleForPageIndex:index];
+                [_delegate pagingScrollView:self imageScrollView:page didRecycleForPageIndex:page.pageIndex];
             }
         }
     }
@@ -372,7 +372,7 @@
         _pagingScrollView.bounds = pagingBounds;
         
         if ([_delegate respondsToSelector:@selector(pagingScrollView:imageScrollView:didReuseForPageIndex:)]) {
-            [_delegate pagingScrollView:self imageScrollView:page didReuseForPageIndex:index];
+            [_delegate pagingScrollView:self imageScrollView:page didReuseForPageIndex:page.pageIndex];
         }
     }
     
