@@ -3,9 +3,9 @@ use_frameworks!
 target 'AFTPhotoScroller_Example' do
   pod 'AFTPhotoScroller', :path => '../'
 
-  target 'AFTPhotoScroller_Tests' do
-    inherit! :search_paths
-
-    pod 'FBSnapshotTestCase'
-  end
+# target 'AFTPhotoScroller_Tests' do
+#    inherit! :search_paths
+#
+#    pod 'FBSnapshotTestCase'
+#  end
 end

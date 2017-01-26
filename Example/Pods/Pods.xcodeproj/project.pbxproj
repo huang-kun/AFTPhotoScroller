@@ -7,140 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		051A816D6DD0CAE13496DDCFE0829167 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 85E250EF19C5B5671AEC10BEB508D087 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		094973D2D2F1E3B2E772F93C8147C6B9 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EECE81A9AEC1ED1057A9C3C88DBCEBE /* UIApplication+StrictKeyWindow.m */; };
-		0B8DBAB184BB7E8E1D9C5E3386A8DEDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA75099E263FEEEAC4EABC8DDDC7FEE0 /* Foundation.framework */; };
-		10DCE0A5E35937BBC4A53DAD8A3D2559 /* AFTPagingScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = A06B432BD667B88CAE5F00FB1DC99204 /* AFTPagingScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1AB7934C16CE49DE196FFC7BE7278287 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */; };
-		23052BE235AFE4A2863889468A32257B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA75099E263FEEEAC4EABC8DDDC7FEE0 /* Foundation.framework */; };
-		2F485B69F51E4F723A38410F31F08550 /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		35DD05FD595A6FE7F5A0692D12E319DC /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CEF7D6C5E08AB80E58DABC75D882BC /* UIImage+Diff.m */; };
-		3B83A2F08BC090A6FD3EBA869E1BD39D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41342C8431DAAFD900CDBA3C3B840CBB /* QuartzCore.framework */; };
-		421B6D5FFB1513CC1D5FE1BCE529CC5C /* Pods-AFTPhotoScroller_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D9D32338D87C9757C58971FE47323B3 /* Pods-AFTPhotoScroller_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		421CDD701AEE0F2458A84200366CDD0F /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B161931541BFE46DFEA2092EDDDA815 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		506D761F91EC3583789A837C559972FE /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C18C0EB1FED5EB5CE3B0E768AC510F /* FBSnapshotTestCase-dummy.m */; };
-		5CF86AB6285972158419F70D4C7054FF /* Pods-AFTPhotoScroller_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D156A010A6D46E0B11876035508D3B7 /* Pods-AFTPhotoScroller_Example-dummy.m */; };
-		640776F175B648FBC2E43C16ECF3F39B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E496C2E8F5310CCD9757EFC3961482B /* UIKit.framework */; };
-		65ABEAC30999F2640DE1BB2DAFCD56E2 /* AFTImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DDD976607067844B67C71009D6F9C0 /* AFTImageScrollView.m */; };
-		69DA8B003216466C60F029CBD79897F1 /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E22F9517F21D3A0251F88FCAB281E /* UIImage+Compare.m */; };
-		756564ABAF2892FE7140C92A1CDDCF65 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFBDCC891B770A2AC9EF0FB164B751 /* UIImage+Snapshot.m */; };
-		8BA7721BDA935E5D9288121CACE6560F /* AFTPagingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9930EBCFF7C60C0928E3485BB51EA982 /* AFTPagingScrollView.m */; };
-		9673CF780F48C8E4EC2A331717B1F67C /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A2D2DD46ACC82E82E21F5BA9D32BE742 /* Pods-AFTPhotoScroller_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CE315B78EC28C1BC6A4CFB4F74E64B6 /* Pods-AFTPhotoScroller_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A4F69F3477A935285620AC3031C5C848 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 052258A488A96C35531FAC73C4F42924 /* FBSnapshotTestController.m */; };
-		B758FB09FE2C06C1B8E36A71A9D76D41 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73D037B3C804B9E1BB70538E342E5104 /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B867BBA915E0449172867DDAE6D80B96 /* AFTPhotoScroller-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ACCF7F9F128E378A692625B43B00C8 /* AFTPhotoScroller-dummy.m */; };
-		BC952FC04FC963C1294DCD619C9B6B3B /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = B9109B8B333B5A1A3E92EFC09EDC10AC /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BE14F2198CDB0DAD98A567981D21C7A1 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 39577E2B806B8B2D019998DE60728F63 /* FBSnapshotTestCase.m */; };
-		BFCE460CC33E8872B7156D4166340178 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C273358F3248321F54E98710C67D0535 /* Pods-AFTPhotoScroller_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E84CDB65B6E47A4A034D8977CD680 /* Pods-AFTPhotoScroller_Tests-dummy.m */; };
-		C80155F6A2D91AB877DD7C3445D25B80 /* AFTImageScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = F03328DC25998B18121055E449279ABA /* AFTImageScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CAFA5E486BCE117A7D8C0FBF9DA6666B /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		D32332CA40D4F631E8DBA950B25A18FA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C32099E0A716483F90035D502A494AC /* XCTest.framework */; };
-		DB7A106243AC974FC7EBEB00B506C786 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */; };
-		F8A1118BAE9D12EEA9CCC76A9A90FFD8 /* AFTPhotoScroller-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B8CFDEB209AE8B099035AF74CA2F864F /* AFTPhotoScroller-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FB6F12161762E2206041C69F6C4D7366 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA75099E263FEEEAC4EABC8DDDC7FEE0 /* Foundation.framework */; };
-		FC32ECAC90E1ECFB3686CA01BD6D53AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA75099E263FEEEAC4EABC8DDDC7FEE0 /* Foundation.framework */; };
+		042A624453D71C4907C620CB130ACD79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		421B6D5FFB1513CC1D5FE1BCE529CC5C /* Pods-AFTPhotoScroller_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB81387C55E1017C8CBBF4196B13A0F /* Pods-AFTPhotoScroller_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		56297C8B9E2E1FF8327B791D285FED90 /* AFTPhotoScroller.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B7A0155408F5C53BE5387AA299EF161 /* AFTPhotoScroller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CF86AB6285972158419F70D4C7054FF /* Pods-AFTPhotoScroller_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 363FE443D48FD99EA160C67FE902F32D /* Pods-AFTPhotoScroller_Example-dummy.m */; };
+		6006F98BE111C2276EA1AA742ACEC66A /* AFTImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5942A600F5F5276183D4B5C7736CE5A0 /* AFTImageScrollView.m */; };
+		BBC6BD586C79A32C890B40537B6914E5 /* AFTPagingScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = F5B20D0275D2E564A8973DB1A83AC92A /* AFTPagingScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCB238DFB89B284A80C490AEC2950766 /* AFTPhotoScroller-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ACCF7F9F128E378A692625B43B00C8 /* AFTPhotoScroller-dummy.m */; };
+		EA216C013BDBA61DDF5D4D0DE1AA9C8A /* AFTImageScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = E63F47620B11C47A1F96FC0ED05FFC48 /* AFTImageScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB7514D56AE05A7869923A0BA6C9150B /* AFTPagingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30719B48B526488AE21D187A3A5ABB44 /* AFTPagingScrollView.m */; };
+		FC32ECAC90E1ECFB3686CA01BD6D53AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		FF2CC9A5CAD5AC94A44E4183A2893119 /* AFTPhotoScroller-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B8CFDEB209AE8B099035AF74CA2F864F /* AFTPhotoScroller-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2FD31F3DAA1BF702FD8F4A5B3FF107B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 34CD2E3428AB802BACA62286FF5074B1;
-			remoteInfo = FBSnapshotTestCase;
-		};
 		FD25FF1B25EA405176D3E0693567DAD4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 130F3E2F72F8778F09AE976B600968AD;
+			remoteGlobalIDString = 80A78A53D978A0E64C3EC36F877460A6;
 			remoteInfo = AFTPhotoScroller;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		037665FE9C8AE6ED639F7574B172C8E3 /* Pods-AFTPhotoScroller_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AFTPhotoScroller_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		052258A488A96C35531FAC73C4F42924 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
-		0B161931541BFE46DFEA2092EDDDA815 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
-		0E496C2E8F5310CCD9757EFC3961482B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
-		1984881C94E300B45C24A6E3AA6D7704 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A0DCB560BDC6AAC8A062ECAADEC68B9 /* Pods-AFTPhotoScroller_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AFTPhotoScroller_Tests-resources.sh"; sourceTree = "<group>"; };
-		1AAEF7AB1E37042D00D5BDEB /* AFTPhotoScroller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFTPhotoScroller.h; sourceTree = "<group>"; };
-		1D9D32338D87C9757C58971FE47323B3 /* Pods-AFTPhotoScroller_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AFTPhotoScroller_Example-umbrella.h"; sourceTree = "<group>"; };
-		1F6BE5466E37BFEEF5CE1F2CA288276A /* Pods-AFTPhotoScroller_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AFTPhotoScroller_Example.modulemap"; sourceTree = "<group>"; };
-		1F76F24D8C4E6690259B0009CE87A134 /* Pods-AFTPhotoScroller_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AFTPhotoScroller_Example.release.xcconfig"; sourceTree = "<group>"; };
-		2722CC9109007B6563A9764D0A47AEEB /* Pods-AFTPhotoScroller_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AFTPhotoScroller_Tests.modulemap"; sourceTree = "<group>"; };
-		2EECE81A9AEC1ED1057A9C3C88DBCEBE /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
-		3697754DA73B9B9EF179922C198AD5B1 /* Pods-AFTPhotoScroller_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AFTPhotoScroller_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		39577E2B806B8B2D019998DE60728F63 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
-		399700FED96FBBD501800B676047F3E8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B5E22F9517F21D3A0251F88FCAB281E /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
-		3C32099E0A716483F90035D502A494AC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		3DBFBDCC891B770A2AC9EF0FB164B751 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
-		41342C8431DAAFD900CDBA3C3B840CBB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		41953E0F212B841EB1F0B25946E73F80 /* Pods-AFTPhotoScroller_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AFTPhotoScroller_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
-		4CE315B78EC28C1BC6A4CFB4F74E64B6 /* Pods-AFTPhotoScroller_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AFTPhotoScroller_Tests-umbrella.h"; sourceTree = "<group>"; };
-		52C18C0EB1FED5EB5CE3B0E768AC510F /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
+		280C73543DAD3D3941EDF66AC5BC47C7 /* Pods_AFTPhotoScroller_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AFTPhotoScroller_Example.framework; path = "Pods-AFTPhotoScroller_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B7A0155408F5C53BE5387AA299EF161 /* AFTPhotoScroller.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AFTPhotoScroller.h; sourceTree = "<group>"; };
+		30719B48B526488AE21D187A3A5ABB44 /* AFTPagingScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AFTPagingScrollView.m; sourceTree = "<group>"; };
+		34E0D5CCD6139EC273375A659B088FCB /* Pods-AFTPhotoScroller_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AFTPhotoScroller_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		363FE443D48FD99EA160C67FE902F32D /* Pods-AFTPhotoScroller_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AFTPhotoScroller_Example-dummy.m"; sourceTree = "<group>"; };
+		3CB81387C55E1017C8CBBF4196B13A0F /* Pods-AFTPhotoScroller_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AFTPhotoScroller_Example-umbrella.h"; sourceTree = "<group>"; };
+		430BF4BC2AAEED1CFC3A2F267C7A755E /* Pods-AFTPhotoScroller_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AFTPhotoScroller_Example-resources.sh"; sourceTree = "<group>"; };
+		4B388C2653DB77B1C017EFF2B762B7BB /* Pods-AFTPhotoScroller_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AFTPhotoScroller_Example.release.xcconfig"; sourceTree = "<group>"; };
 		542FE4CFD7205117F10CB3F116CF438A /* AFTPhotoScroller.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFTPhotoScroller.xcconfig; sourceTree = "<group>"; };
-		54CD6E688DEB37484A304AC5B10410CE /* AFTPhotoScroller.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFTPhotoScroller.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
-		5B55A812531B360F97AEFF81303C9AC2 /* Pods-AFTPhotoScroller_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AFTPhotoScroller_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		61DFE4C42D958E7F848D5E2F1EF34A9C /* Pods-AFTPhotoScroller_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AFTPhotoScroller_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		62500EA8CABFB92813A81CD40C6FE26D /* Pods-AFTPhotoScroller_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AFTPhotoScroller_Example-frameworks.sh"; sourceTree = "<group>"; };
-		66788AACC59658CBD3CEA54C13722545 /* Pods-AFTPhotoScroller_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AFTPhotoScroller_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		683D65149D5FFCAC529A8A5C3900BD7A /* AFTPhotoScroller.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AFTPhotoScroller.modulemap; sourceTree = "<group>"; };
-		6E66B4218824CF8160D93713DDBEEA82 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		73CA7614C713549F50E0891F65019357 /* Pods_AFTPhotoScroller_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AFTPhotoScroller_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		73D037B3C804B9E1BB70538E342E5104 /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
-		7D156A010A6D46E0B11876035508D3B7 /* Pods-AFTPhotoScroller_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AFTPhotoScroller_Example-dummy.m"; sourceTree = "<group>"; };
-		7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
-		8045F0C7B46CE01B89A63914B08E5998 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		823558E8AC8EB39D028DB5FBBEA227A3 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
-		82E2D81DB0F1551C1B2B8E7D2DFA0CD6 /* Pods-AFTPhotoScroller_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AFTPhotoScroller_Example-resources.sh"; sourceTree = "<group>"; };
-		85E250EF19C5B5671AEC10BEB508D087 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		98C1F8D670B7AACCAA3ADCD22EC53D19 /* Pods_AFTPhotoScroller_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AFTPhotoScroller_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9930EBCFF7C60C0928E3485BB51EA982 /* AFTPagingScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AFTPagingScrollView.m; sourceTree = "<group>"; };
+		5942A600F5F5276183D4B5C7736CE5A0 /* AFTImageScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AFTImageScrollView.m; sourceTree = "<group>"; };
+		6078470BAA3DEE6F50D548966B04A7F3 /* Pods-AFTPhotoScroller_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-AFTPhotoScroller_Example.modulemap"; sourceTree = "<group>"; };
+		683D65149D5FFCAC529A8A5C3900BD7A /* AFTPhotoScroller.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AFTPhotoScroller.modulemap; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96153AEABB293F455FEBF3A281F47EF4 /* Pods-AFTPhotoScroller_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AFTPhotoScroller_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9BD33CF6EC06CE6937D5BDFDFB8952BB /* AFTPhotoScroller-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFTPhotoScroller-prefix.pch"; sourceTree = "<group>"; };
-		A06B432BD667B88CAE5F00FB1DC99204 /* AFTPagingScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AFTPagingScrollView.h; sourceTree = "<group>"; };
-		A1DF14D9DEEA584EF1B568CE08774B4A /* Pods-AFTPhotoScroller_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AFTPhotoScroller_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		A089E4F554FE7DD06EA1F015CD514284 /* AFTPhotoScroller.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AFTPhotoScroller.framework; path = AFTPhotoScroller.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A942931B22007A202A52F81ABECE751A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8CFDEB209AE8B099035AF74CA2F864F /* AFTPhotoScroller-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFTPhotoScroller-umbrella.h"; sourceTree = "<group>"; };
-		B9109B8B333B5A1A3E92EFC09EDC10AC /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
-		B9CEF7D6C5E08AB80E58DABC75D882BC /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
-		C2B357D266F67CD66DECD677D25661F1 /* Pods-AFTPhotoScroller_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AFTPhotoScroller_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		C3DDD976607067844B67C71009D6F9C0 /* AFTImageScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AFTImageScrollView.m; sourceTree = "<group>"; };
-		CC12BCFA3FC0B8C307F5B38C673EDD12 /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CC099DAB081A0500596853072D854F5E /* Pods-AFTPhotoScroller_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AFTPhotoScroller_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		D8ACCF7F9F128E378A692625B43B00C8 /* AFTPhotoScroller-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFTPhotoScroller-dummy.m"; sourceTree = "<group>"; };
-		D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
-		DA75099E263FEEEAC4EABC8DDDC7FEE0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DADAF30F2D84FDAAD2ADD2D50C1F40DF /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
-		E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
-		ED6E84CDB65B6E47A4A034D8977CD680 /* Pods-AFTPhotoScroller_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AFTPhotoScroller_Tests-dummy.m"; sourceTree = "<group>"; };
-		F03328DC25998B18121055E449279ABA /* AFTImageScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AFTImageScrollView.h; sourceTree = "<group>"; };
+		DA72070DE7380A13B34E8DB05874848E /* Pods-AFTPhotoScroller_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AFTPhotoScroller_Example-frameworks.sh"; sourceTree = "<group>"; };
+		E63F47620B11C47A1F96FC0ED05FFC48 /* AFTImageScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AFTImageScrollView.h; sourceTree = "<group>"; };
+		F4167D41E04CF4F951B22DCB69074E6F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5B20D0275D2E564A8973DB1A83AC92A /* AFTPagingScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AFTPagingScrollView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1D421A30A1BDB7E1C4216F64D0C939B1 /* Frameworks */ = {
+		0B7656B291EA9A453E1E6FFA64168A47 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B8DBAB184BB7E8E1D9C5E3386A8DEDB /* Foundation.framework in Frameworks */,
-				3B83A2F08BC090A6FD3EBA869E1BD39D /* QuartzCore.framework in Frameworks */,
-				640776F175B648FBC2E43C16ECF3F39B /* UIKit.framework in Frameworks */,
-				D32332CA40D4F631E8DBA950B25A18FA /* XCTest.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1DA05790AC077F262BC9E75E2F7A750F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FB6F12161762E2206041C69F6C4D7366 /* Foundation.framework in Frameworks */,
+				042A624453D71C4907C620CB130ACD79 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,47 +75,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C06753943240D9B039516A41ACF1C2B1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				23052BE235AFE4A2863889468A32257B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
+		1A54C072105EF26492A1F64A118ACF92 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				F76C5E10C253876355FB231229C42226 /* iOS */,
+				E63F47620B11C47A1F96FC0ED05FFC48 /* AFTImageScrollView.h */,
+				5942A600F5F5276183D4B5C7736CE5A0 /* AFTImageScrollView.m */,
+				F5B20D0275D2E564A8973DB1A83AC92A /* AFTPagingScrollView.h */,
+				30719B48B526488AE21D187A3A5ABB44 /* AFTPagingScrollView.m */,
+				2B7A0155408F5C53BE5387AA299EF161 /* AFTPhotoScroller.h */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1549F91FCD089822594C1F5DB8AB9E8F /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				823558E8AC8EB39D028DB5FBBEA227A3 /* FBSnapshotTestCase.modulemap */,
-				DADAF30F2D84FDAAD2ADD2D50C1F40DF /* FBSnapshotTestCase.xcconfig */,
-				52C18C0EB1FED5EB5CE3B0E768AC510F /* FBSnapshotTestCase-dummy.m */,
-				CC12BCFA3FC0B8C307F5B38C673EDD12 /* FBSnapshotTestCase-prefix.pch */,
-				73D037B3C804B9E1BB70538E342E5104 /* FBSnapshotTestCase-umbrella.h */,
-				6E66B4218824CF8160D93713DDBEEA82 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/FBSnapshotTestCase";
-			sourceTree = "<group>";
-		};
-		2287B5EBEAA3C332F8DB9A1E61F5B097 /* FBSnapshotTestCase */ = {
-			isa = PBXGroup;
-			children = (
-				F35791481CAFDD8E7715AE1B44687328 /* Core */,
-				1549F91FCD089822594C1F5DB8AB9E8F /* Support Files */,
-				99E46DD4AB2256791F111C718CB0EEF8 /* SwiftSupport */,
-			);
-			path = FBSnapshotTestCase;
+			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		229257D3D3936C3DBF94CBD25437AF62 /* Development Pods */ = {
@@ -201,6 +97,15 @@
 				995D00722B8F24AD34A47281729B74C5 /* AFTPhotoScroller */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		2363F8C4B1BFDF9D3028485D668C45FC /* AFTPhotoScroller */ = {
+			isa = PBXGroup;
+			children = (
+				1A54C072105EF26492A1F64A118ACF92 /* Classes */,
+			);
+			name = AFTPhotoScroller;
+			path = AFTPhotoScroller;
 			sourceTree = "<group>";
 		};
 		38B6DFADC00826D9822FBD4729A9D5CC /* Support Files */ = {
@@ -217,49 +122,12 @@
 			path = "Example/Pods/Target Support Files/AFTPhotoScroller";
 			sourceTree = "<group>";
 		};
-		4133AEC774ED33B65D87C73ECFBA768C /* Pods-AFTPhotoScroller_Tests */ = {
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				399700FED96FBBD501800B676047F3E8 /* Info.plist */,
-				2722CC9109007B6563A9764D0A47AEEB /* Pods-AFTPhotoScroller_Tests.modulemap */,
-				66788AACC59658CBD3CEA54C13722545 /* Pods-AFTPhotoScroller_Tests-acknowledgements.markdown */,
-				61DFE4C42D958E7F848D5E2F1EF34A9C /* Pods-AFTPhotoScroller_Tests-acknowledgements.plist */,
-				ED6E84CDB65B6E47A4A034D8977CD680 /* Pods-AFTPhotoScroller_Tests-dummy.m */,
-				C2B357D266F67CD66DECD677D25661F1 /* Pods-AFTPhotoScroller_Tests-frameworks.sh */,
-				1A0DCB560BDC6AAC8A062ECAADEC68B9 /* Pods-AFTPhotoScroller_Tests-resources.sh */,
-				4CE315B78EC28C1BC6A4CFB4F74E64B6 /* Pods-AFTPhotoScroller_Tests-umbrella.h */,
-				41953E0F212B841EB1F0B25946E73F80 /* Pods-AFTPhotoScroller_Tests.debug.xcconfig */,
-				3697754DA73B9B9EF179922C198AD5B1 /* Pods-AFTPhotoScroller_Tests.release.xcconfig */,
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
 			);
-			name = "Pods-AFTPhotoScroller_Tests";
-			path = "Target Support Files/Pods-AFTPhotoScroller_Tests";
-			sourceTree = "<group>";
-		};
-		6C0766270092E3FC5B56CE915A6420AC /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7C902DF56F5ADE1BA48C12CB232D7DDC /* Pods-AFTPhotoScroller_Example */,
-				4133AEC774ED33B65D87C73ECFBA768C /* Pods-AFTPhotoScroller_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		7C902DF56F5ADE1BA48C12CB232D7DDC /* Pods-AFTPhotoScroller_Example */ = {
-			isa = PBXGroup;
-			children = (
-				1984881C94E300B45C24A6E3AA6D7704 /* Info.plist */,
-				1F6BE5466E37BFEEF5CE1F2CA288276A /* Pods-AFTPhotoScroller_Example.modulemap */,
-				5B55A812531B360F97AEFF81303C9AC2 /* Pods-AFTPhotoScroller_Example-acknowledgements.markdown */,
-				A1DF14D9DEEA584EF1B568CE08774B4A /* Pods-AFTPhotoScroller_Example-acknowledgements.plist */,
-				7D156A010A6D46E0B11876035508D3B7 /* Pods-AFTPhotoScroller_Example-dummy.m */,
-				62500EA8CABFB92813A81CD40C6FE26D /* Pods-AFTPhotoScroller_Example-frameworks.sh */,
-				82E2D81DB0F1551C1B2B8E7D2DFA0CD6 /* Pods-AFTPhotoScroller_Example-resources.sh */,
-				1D9D32338D87C9757C58971FE47323B3 /* Pods-AFTPhotoScroller_Example-umbrella.h */,
-				037665FE9C8AE6ED639F7574B172C8E3 /* Pods-AFTPhotoScroller_Example.debug.xcconfig */,
-				1F76F24D8C4E6690259B0009CE87A134 /* Pods-AFTPhotoScroller_Example.release.xcconfig */,
-			);
-			name = "Pods-AFTPhotoScroller_Example";
-			path = "Target Support Files/Pods-AFTPhotoScroller_Example";
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -267,105 +135,79 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				229257D3D3936C3DBF94CBD25437AF62 /* Development Pods */,
-				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
-				FBD2D672921284E66F309CA3462F84D6 /* Pods */,
-				BB3A1BA37317E224708E86DC1347E413 /* Products */,
-				6C0766270092E3FC5B56CE915A6420AC /* Targets Support Files */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				D512A6175A4315F0EBD8CBD571D28559 /* Products */,
+				C27D11F6393CAC6EB84A987D4180AEFA /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
 		995D00722B8F24AD34A47281729B74C5 /* AFTPhotoScroller */ = {
 			isa = PBXGroup;
 			children = (
-				BAC1D33CD2E8993AA8B5E538CC15100C /* AFTPhotoScroller */,
+				2363F8C4B1BFDF9D3028485D668C45FC /* AFTPhotoScroller */,
 				38B6DFADC00826D9822FBD4729A9D5CC /* Support Files */,
 			);
 			name = AFTPhotoScroller;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		99E46DD4AB2256791F111C718CB0EEF8 /* SwiftSupport */ = {
+		A22940A962303FFA4701B27DAB53650D /* Pods-AFTPhotoScroller_Example */ = {
 			isa = PBXGroup;
 			children = (
-				D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */,
+				F4167D41E04CF4F951B22DCB69074E6F /* Info.plist */,
+				6078470BAA3DEE6F50D548966B04A7F3 /* Pods-AFTPhotoScroller_Example.modulemap */,
+				34E0D5CCD6139EC273375A659B088FCB /* Pods-AFTPhotoScroller_Example-acknowledgements.markdown */,
+				CC099DAB081A0500596853072D854F5E /* Pods-AFTPhotoScroller_Example-acknowledgements.plist */,
+				363FE443D48FD99EA160C67FE902F32D /* Pods-AFTPhotoScroller_Example-dummy.m */,
+				DA72070DE7380A13B34E8DB05874848E /* Pods-AFTPhotoScroller_Example-frameworks.sh */,
+				430BF4BC2AAEED1CFC3A2F267C7A755E /* Pods-AFTPhotoScroller_Example-resources.sh */,
+				3CB81387C55E1017C8CBBF4196B13A0F /* Pods-AFTPhotoScroller_Example-umbrella.h */,
+				96153AEABB293F455FEBF3A281F47EF4 /* Pods-AFTPhotoScroller_Example.debug.xcconfig */,
+				4B388C2653DB77B1C017EFF2B762B7BB /* Pods-AFTPhotoScroller_Example.release.xcconfig */,
 			);
-			name = SwiftSupport;
+			name = "Pods-AFTPhotoScroller_Example";
+			path = "Target Support Files/Pods-AFTPhotoScroller_Example";
 			sourceTree = "<group>";
 		};
-		BAC1D33CD2E8993AA8B5E538CC15100C /* AFTPhotoScroller */ = {
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C6B991CA9B0A525BABFAF63040272129 /* Classes */,
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
 			);
-			path = AFTPhotoScroller;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BB3A1BA37317E224708E86DC1347E413 /* Products */ = {
+		C27D11F6393CAC6EB84A987D4180AEFA /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				54CD6E688DEB37484A304AC5B10410CE /* AFTPhotoScroller.framework */,
-				8045F0C7B46CE01B89A63914B08E5998 /* FBSnapshotTestCase.framework */,
-				98C1F8D670B7AACCAA3ADCD22EC53D19 /* Pods_AFTPhotoScroller_Example.framework */,
-				73CA7614C713549F50E0891F65019357 /* Pods_AFTPhotoScroller_Tests.framework */,
+				A22940A962303FFA4701B27DAB53650D /* Pods-AFTPhotoScroller_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D512A6175A4315F0EBD8CBD571D28559 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A089E4F554FE7DD06EA1F015CD514284 /* AFTPhotoScroller.framework */,
+				280C73543DAD3D3941EDF66AC5BC47C7 /* Pods_AFTPhotoScroller_Example.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		C6B991CA9B0A525BABFAF63040272129 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				1AAEF7AB1E37042D00D5BDEB /* AFTPhotoScroller.h */,
-				F03328DC25998B18121055E449279ABA /* AFTImageScrollView.h */,
-				C3DDD976607067844B67C71009D6F9C0 /* AFTImageScrollView.m */,
-				A06B432BD667B88CAE5F00FB1DC99204 /* AFTPagingScrollView.h */,
-				9930EBCFF7C60C0928E3485BB51EA982 /* AFTPagingScrollView.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		F35791481CAFDD8E7715AE1B44687328 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */,
-				39577E2B806B8B2D019998DE60728F63 /* FBSnapshotTestCase.m */,
-				7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */,
-				58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */,
-				1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */,
-				052258A488A96C35531FAC73C4F42924 /* FBSnapshotTestController.m */,
-				B9109B8B333B5A1A3E92EFC09EDC10AC /* UIApplication+StrictKeyWindow.h */,
-				2EECE81A9AEC1ED1057A9C3C88DBCEBE /* UIApplication+StrictKeyWindow.m */,
-				432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */,
-				3B5E22F9517F21D3A0251F88FCAB281E /* UIImage+Compare.m */,
-				85E250EF19C5B5671AEC10BEB508D087 /* UIImage+Diff.h */,
-				B9CEF7D6C5E08AB80E58DABC75D882BC /* UIImage+Diff.m */,
-				0B161931541BFE46DFEA2092EDDDA815 /* UIImage+Snapshot.h */,
-				3DBFBDCC891B770A2AC9EF0FB164B751 /* UIImage+Snapshot.m */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		F76C5E10C253876355FB231229C42226 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				DA75099E263FEEEAC4EABC8DDDC7FEE0 /* Foundation.framework */,
-				41342C8431DAAFD900CDBA3C3B840CBB /* QuartzCore.framework */,
-				0E496C2E8F5310CCD9757EFC3961482B /* UIKit.framework */,
-				3C32099E0A716483F90035D502A494AC /* XCTest.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		FBD2D672921284E66F309CA3462F84D6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2287B5EBEAA3C332F8DB9A1E61F5B097 /* FBSnapshotTestCase */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1E71BDDAF8B2C242A0A00398A8BB2878 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA216C013BDBA61DDF5D4D0DE1AA9C8A /* AFTImageScrollView.h in Headers */,
+				BBC6BD586C79A32C890B40537B6914E5 /* AFTPagingScrollView.h in Headers */,
+				FF2CC9A5CAD5AC94A44E4183A2893119 /* AFTPhotoScroller-umbrella.h in Headers */,
+				56297C8B9E2E1FF8327B791D285FED90 /* AFTPhotoScroller.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2793CA3CFFA92A790E5CF74BF58039AF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -374,67 +216,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		77E9ED8C03F4E5688D11D36B54E7E051 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C80155F6A2D91AB877DD7C3445D25B80 /* AFTImageScrollView.h in Headers */,
-				10DCE0A5E35937BBC4A53DAD8A3D2559 /* AFTPagingScrollView.h in Headers */,
-				F8A1118BAE9D12EEA9CCC76A9A90FFD8 /* AFTPhotoScroller-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9DC6F5AC11E37A1EB45C6473C9E800B6 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B758FB09FE2C06C1B8E36A71A9D76D41 /* FBSnapshotTestCase-umbrella.h in Headers */,
-				9673CF780F48C8E4EC2A331717B1F67C /* FBSnapshotTestCase.h in Headers */,
-				BFCE460CC33E8872B7156D4166340178 /* FBSnapshotTestCasePlatform.h in Headers */,
-				2F485B69F51E4F723A38410F31F08550 /* FBSnapshotTestController.h in Headers */,
-				BC952FC04FC963C1294DCD619C9B6B3B /* UIApplication+StrictKeyWindow.h in Headers */,
-				CAFA5E486BCE117A7D8C0FBF9DA6666B /* UIImage+Compare.h in Headers */,
-				051A816D6DD0CAE13496DDCFE0829167 /* UIImage+Diff.h in Headers */,
-				421CDD701AEE0F2458A84200366CDD0F /* UIImage+Snapshot.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F243FC1E19C4142BDCDDCF31E318C866 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A2D2DD46ACC82E82E21F5BA9D32BE742 /* Pods-AFTPhotoScroller_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0C9CB864FAFADC63AEDEF5A414B53916 /* Pods-AFTPhotoScroller_Tests */ = {
+		80A78A53D978A0E64C3EC36F877460A6 /* AFTPhotoScroller */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D762967652A6A8890B2F30A2E27F04E6 /* Build configuration list for PBXNativeTarget "Pods-AFTPhotoScroller_Tests" */;
+			buildConfigurationList = C8EFF3427904DE7F6E8714F8067DEC42 /* Build configuration list for PBXNativeTarget "AFTPhotoScroller" */;
 			buildPhases = (
-				5F5D590E403602A483C4E346A3C5935B /* Sources */,
-				C06753943240D9B039516A41ACF1C2B1 /* Frameworks */,
-				F243FC1E19C4142BDCDDCF31E318C866 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4B0B4DB125F3674CCAED50EA8AD11426 /* PBXTargetDependency */,
-			);
-			name = "Pods-AFTPhotoScroller_Tests";
-			productName = "Pods-AFTPhotoScroller_Tests";
-			productReference = 73CA7614C713549F50E0891F65019357 /* Pods_AFTPhotoScroller_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		130F3E2F72F8778F09AE976B600968AD /* AFTPhotoScroller */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A39984D17899BD1356D77590FE39E23A /* Build configuration list for PBXNativeTarget "AFTPhotoScroller" */;
-			buildPhases = (
-				C4B4DA9DA481E9B9D00586CD3DE6DAE5 /* Sources */,
-				1DA05790AC077F262BC9E75E2F7A750F /* Frameworks */,
-				77E9ED8C03F4E5688D11D36B54E7E051 /* Headers */,
+				E988C1240787AEDBA9A9CF543A005AB9 /* Sources */,
+				0B7656B291EA9A453E1E6FFA64168A47 /* Frameworks */,
+				1E71BDDAF8B2C242A0A00398A8BB2878 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -442,24 +233,7 @@
 			);
 			name = AFTPhotoScroller;
 			productName = AFTPhotoScroller;
-			productReference = 54CD6E688DEB37484A304AC5B10410CE /* AFTPhotoScroller.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		34CD2E3428AB802BACA62286FF5074B1 /* FBSnapshotTestCase */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F28097D43AF5CD8DA838ABD52A053790 /* Build configuration list for PBXNativeTarget "FBSnapshotTestCase" */;
-			buildPhases = (
-				E2E80CCD063D04B57A1A5E140726E8A4 /* Sources */,
-				1D421A30A1BDB7E1C4216F64D0C939B1 /* Frameworks */,
-				9DC6F5AC11E37A1EB45C6473C9E800B6 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = FBSnapshotTestCase;
-			productName = FBSnapshotTestCase;
-			productReference = 8045F0C7B46CE01B89A63914B08E5998 /* FBSnapshotTestCase.framework */;
+			productReference = A089E4F554FE7DD06EA1F015CD514284 /* AFTPhotoScroller.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E9D8032CFE1DDDC1F65FF4C1F5550C11 /* Pods-AFTPhotoScroller_Example */ = {
@@ -477,7 +251,7 @@
 			);
 			name = "Pods-AFTPhotoScroller_Example";
 			productName = "Pods-AFTPhotoScroller_Example";
-			productReference = 98C1F8D670B7AACCAA3ADCD22EC53D19 /* Pods_AFTPhotoScroller_Example.framework */;
+			productReference = 280C73543DAD3D3941EDF66AC5BC47C7 /* Pods_AFTPhotoScroller_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -497,27 +271,17 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = BB3A1BA37317E224708E86DC1347E413 /* Products */;
+			productRefGroup = D512A6175A4315F0EBD8CBD571D28559 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				130F3E2F72F8778F09AE976B600968AD /* AFTPhotoScroller */,
-				34CD2E3428AB802BACA62286FF5074B1 /* FBSnapshotTestCase */,
+				80A78A53D978A0E64C3EC36F877460A6 /* AFTPhotoScroller */,
 				E9D8032CFE1DDDC1F65FF4C1F5550C11 /* Pods-AFTPhotoScroller_Example */,
-				0C9CB864FAFADC63AEDEF5A414B53916 /* Pods-AFTPhotoScroller_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5F5D590E403602A483C4E346A3C5935B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C273358F3248321F54E98710C67D0535 /* Pods-AFTPhotoScroller_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6D4117EA0EC936F14C1C34824F3CB1A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -526,259 +290,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C4B4DA9DA481E9B9D00586CD3DE6DAE5 /* Sources */ = {
+		E988C1240787AEDBA9A9CF543A005AB9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65ABEAC30999F2640DE1BB2DAFCD56E2 /* AFTImageScrollView.m in Sources */,
-				8BA7721BDA935E5D9288121CACE6560F /* AFTPagingScrollView.m in Sources */,
-				B867BBA915E0449172867DDAE6D80B96 /* AFTPhotoScroller-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E2E80CCD063D04B57A1A5E140726E8A4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				506D761F91EC3583789A837C559972FE /* FBSnapshotTestCase-dummy.m in Sources */,
-				BE14F2198CDB0DAD98A567981D21C7A1 /* FBSnapshotTestCase.m in Sources */,
-				DB7A106243AC974FC7EBEB00B506C786 /* FBSnapshotTestCasePlatform.m in Sources */,
-				A4F69F3477A935285620AC3031C5C848 /* FBSnapshotTestController.m in Sources */,
-				1AB7934C16CE49DE196FFC7BE7278287 /* SwiftSupport.swift in Sources */,
-				094973D2D2F1E3B2E772F93C8147C6B9 /* UIApplication+StrictKeyWindow.m in Sources */,
-				69DA8B003216466C60F029CBD79897F1 /* UIImage+Compare.m in Sources */,
-				35DD05FD595A6FE7F5A0692D12E319DC /* UIImage+Diff.m in Sources */,
-				756564ABAF2892FE7140C92A1CDDCF65 /* UIImage+Snapshot.m in Sources */,
+				6006F98BE111C2276EA1AA742ACEC66A /* AFTImageScrollView.m in Sources */,
+				FB7514D56AE05A7869923A0BA6C9150B /* AFTPagingScrollView.m in Sources */,
+				DCB238DFB89B284A80C490AEC2950766 /* AFTPhotoScroller-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4B0B4DB125F3674CCAED50EA8AD11426 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBSnapshotTestCase;
-			target = 34CD2E3428AB802BACA62286FF5074B1 /* FBSnapshotTestCase */;
-			targetProxy = 2FD31F3DAA1BF702FD8F4A5B3FF107B1 /* PBXContainerItemProxy */;
-		};
 		EEF51EB7247375B3AB5E2E4DEF57AD93 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AFTPhotoScroller;
-			target = 130F3E2F72F8778F09AE976B600968AD /* AFTPhotoScroller */;
+			target = 80A78A53D978A0E64C3EC36F877460A6 /* AFTPhotoScroller */;
 			targetProxy = FD25FF1B25EA405176D3E0693567DAD4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1D3248219A5D5157B6157F1727510A5E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41953E0F212B841EB1F0B25946E73F80 /* Pods-AFTPhotoScroller_Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-AFTPhotoScroller_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AFTPhotoScroller_Tests/Pods-AFTPhotoScroller_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_AFTPhotoScroller_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		2C48262C9FD6599E51DBFFA348430A9E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 542FE4CFD7205117F10CB3F116CF438A /* AFTPhotoScroller.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AFTPhotoScroller/AFTPhotoScroller-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AFTPhotoScroller/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AFTPhotoScroller/AFTPhotoScroller.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = AFTPhotoScroller;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		37E3B7827F555EF15999C025D1EBC7CC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F76F24D8C4E6690259B0009CE87A134 /* Pods-AFTPhotoScroller_Example.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-AFTPhotoScroller_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AFTPhotoScroller_Example/Pods-AFTPhotoScroller_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_AFTPhotoScroller_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		54EF07299510A0D06904A0AE809E5A0C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 037665FE9C8AE6ED639F7574B172C8E3 /* Pods-AFTPhotoScroller_Example.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-AFTPhotoScroller_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AFTPhotoScroller_Example/Pods-AFTPhotoScroller_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_AFTPhotoScroller_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		885ED7BA81AFCD925D5CCE1007352CF5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 542FE4CFD7205117F10CB3F116CF438A /* AFTPhotoScroller.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AFTPhotoScroller/AFTPhotoScroller-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AFTPhotoScroller/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AFTPhotoScroller/AFTPhotoScroller.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = AFTPhotoScroller;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8DED8AD26D381A6ACFF202E5217EC498 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		9E1E4E48AF2EAB23169E611BF694090A /* Debug */ = {
+		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -814,7 +348,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -822,9 +356,49 @@
 			};
 			name = Debug;
 		};
-		A48DF838CD32B60CBA3139D4DA2D0D1E /* Debug */ = {
+		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DADAF30F2D84FDAAD2ADD2D50C1F40DF /* FBSnapshotTestCase.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		67C6BD6B2FCE2665D1261191434A6146 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 542FE4CFD7205117F10CB3F116CF438A /* AFTPhotoScroller.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -837,27 +411,25 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/AFTPhotoScroller/AFTPhotoScroller-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AFTPhotoScroller/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
+				MODULEMAP_FILE = "Target Support Files/AFTPhotoScroller/AFTPhotoScroller.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = FBSnapshotTestCase;
+				PRODUCT_NAME = AFTPhotoScroller;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		B57EE59C0A00DB99D4A5A4068B8C0C7B /* Release */ = {
+		B3CE8DB5DB5A6BD949C4F63C7241BDB7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DADAF30F2D84FDAAD2ADD2D50C1F40DF /* FBSnapshotTestCase.xcconfig */;
+			baseConfigurationReference = 542FE4CFD7205117F10CB3F116CF438A /* AFTPhotoScroller.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -870,26 +442,60 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/AFTPhotoScroller/AFTPhotoScroller-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AFTPhotoScroller/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
+				MODULEMAP_FILE = "Target Support Files/AFTPhotoScroller/AFTPhotoScroller.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = FBSnapshotTestCase;
+				PRODUCT_NAME = AFTPhotoScroller;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		F5E413704527E8745831BC73157C06F6 /* Release */ = {
+		B448EF34126C5E3C7994E27D9C2E96E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3697754DA73B9B9EF179922C198AD5B1 /* Pods-AFTPhotoScroller_Tests.release.xcconfig */;
+			baseConfigurationReference = 96153AEABB293F455FEBF3A281F47EF4 /* Pods-AFTPhotoScroller_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-AFTPhotoScroller_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AFTPhotoScroller_Example/Pods-AFTPhotoScroller_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_AFTPhotoScroller_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E3CE6B783B7C00ACC789A4FE520EEB75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B388C2653DB77B1C017EFF2B762B7BB /* Pods-AFTPhotoScroller_Example.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -902,18 +508,18 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-AFTPhotoScroller_Tests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-AFTPhotoScroller_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AFTPhotoScroller_Tests/Pods-AFTPhotoScroller_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-AFTPhotoScroller_Example/Pods-AFTPhotoScroller_Example.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_AFTPhotoScroller_Tests;
+				PRODUCT_NAME = Pods_AFTPhotoScroller_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -928,8 +534,8 @@
 		0ED7CB6EEF95300720F79F7CD928A481 /* Build configuration list for PBXNativeTarget "Pods-AFTPhotoScroller_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				54EF07299510A0D06904A0AE809E5A0C /* Debug */,
-				37E3B7827F555EF15999C025D1EBC7CC /* Release */,
+				B448EF34126C5E3C7994E27D9C2E96E0 /* Debug */,
+				E3CE6B783B7C00ACC789A4FE520EEB75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -937,35 +543,17 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9E1E4E48AF2EAB23169E611BF694090A /* Debug */,
-				8DED8AD26D381A6ACFF202E5217EC498 /* Release */,
+				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
+				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A39984D17899BD1356D77590FE39E23A /* Build configuration list for PBXNativeTarget "AFTPhotoScroller" */ = {
+		C8EFF3427904DE7F6E8714F8067DEC42 /* Build configuration list for PBXNativeTarget "AFTPhotoScroller" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2C48262C9FD6599E51DBFFA348430A9E /* Debug */,
-				885ED7BA81AFCD925D5CCE1007352CF5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D762967652A6A8890B2F30A2E27F04E6 /* Build configuration list for PBXNativeTarget "Pods-AFTPhotoScroller_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1D3248219A5D5157B6157F1727510A5E /* Debug */,
-				F5E413704527E8745831BC73157C06F6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F28097D43AF5CD8DA838ABD52A053790 /* Build configuration list for PBXNativeTarget "FBSnapshotTestCase" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A48DF838CD32B60CBA3139D4DA2D0D1E /* Debug */,
-				B57EE59C0A00DB99D4A5A4068B8C0C7B /* Release */,
+				67C6BD6B2FCE2665D1261191434A6146 /* Debug */,
+				B3CE8DB5DB5A6BD949C4F63C7241BDB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
