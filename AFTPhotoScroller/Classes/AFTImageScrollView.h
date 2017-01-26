@@ -14,7 +14,7 @@
 
 - (instancetype)initWithPagingScrollView:(AFTPagingScrollView *)pagingScrollView;
 
-@property (nonatomic, assign) NSUInteger pageIndex;
+@property (nonatomic, assign) NSInteger pageIndex;
 @property (nonatomic, weak) AFTPagingScrollView *pagingScrollView;
 
 - (void)displayImage:(UIImage *)image;
