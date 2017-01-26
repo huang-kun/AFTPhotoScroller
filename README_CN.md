@@ -9,7 +9,10 @@ Check out [English README](https://github.com/huang-kun/AFTPhotoScroller/blob/ma
 
 ## 屏幕截图
 
-![翻页与图片缩放](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video1.gif) ======== ![网络加载图片](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video2.gif) ======== ![视差效果](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video3.gif)
+![翻页与图片缩放](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video1.gif) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![网络加载图片](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video2.gif)
+
+
+![视差效果](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video3.gif)
 
 ## 简介
 

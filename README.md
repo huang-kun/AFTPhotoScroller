@@ -9,7 +9,10 @@
 
 ## ScreenShots
 
-![Paging and zooming](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video1.gif) ======== ![Web image](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video2.gif) ======== ![Parallax Scrolling](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video3.gif)
+![Paging and zooming](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video1.gif) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Web image](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video2.gif) 
+
+
+![Parallax Scrolling](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video3.gif)
 
 ## Introduction
 
