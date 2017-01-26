@@ -8,9 +8,10 @@
 
 #import "AFTViewController.h"
 #import "AFTPagingBaseViewController.h"
+#import "AFTNetworkPagingViewController.h"
 
 @interface AFTViewController () <UITableViewDelegate, UITableViewDataSource>
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 @end
 
 @implementation AFTViewController
@@ -20,12 +21,11 @@
     
     self.title = @"AFTPhotoScrollerDemo";
     
-    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
-    [_tableView registerClass:UITableViewCell.self forCellReuseIdentifier:@"Cell"];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.tableView registerClass:UITableViewCell.self forCellReuseIdentifier:@"Cell"];
 
-    [self.view addSubview:_tableView];
+    [self.view addSubview:self.tableView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,9 +60,17 @@
     if ([vc isKindOfClass:AFTPagingBaseViewController.self]) {
         AFTPagingBaseViewController *bvc = (AFTPagingBaseViewController *)vc;
         bvc.title = title;
-        bvc.images = self.landscapeImages;
+        if (![vc isKindOfClass:AFTNetworkPagingViewController.self]) {
+            bvc.images = self.landscapeImages;
+        }
         [self presentViewController:bvc animated:YES completion:nil];
     }
+}
+
+#pragma mark - Rotation
+
+- (BOOL)shouldAutorotate {
+    return YES;
 }
 
 #pragma mark - Helper
@@ -71,14 +79,16 @@
     return @[ @"Normal pages",
               @"Vertical pages",
               @"Custom pages",
-              @"Parallax pages" ];
+              @"Parallax pages",
+              @"Network pages" ];
 }
 
 - (NSArray *)itemClasses {
     return @[ @"AFTNormalPagingViewController",
               @"AFTVerticalPagingViewController",
               @"AFTCustomPagingViewController",
-              @"AFTParallaxPagingViewController" ];
+              @"AFTParallaxPagingViewController",
+              @"AFTNetworkPagingViewController" ];
 }
 
 - (NSArray *)landscapeImages {

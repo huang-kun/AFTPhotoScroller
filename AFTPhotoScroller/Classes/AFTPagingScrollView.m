@@ -128,6 +128,7 @@
 - (void)reloadPageAtIndex:(NSInteger)pageIndex {
     for (AFTImageScrollView *page in _visiblePages) {
         if (page.pageIndex == pageIndex) {
+            _imageCache[@(pageIndex)] = nil;
             [self configurePage:page forIndex:pageIndex];
             break;
         }
@@ -292,6 +293,10 @@
         if (page.pageIndex < firstNeededPageIndex || page.pageIndex > lastNeededPageIndex) {
             [_recycledPages addObject:page];
             [page removeFromSuperview];
+            
+            if ([_delegate respondsToSelector:@selector(pagingScrollView:imageScrollView:didRecycleForPageIndex:)]) {
+                [_delegate pagingScrollView:self imageScrollView:page didRecycleForPageIndex:index];
+            }
         }
     }
     [_visiblePages minusSet:_recycledPages];
@@ -306,6 +311,10 @@
             [self configurePage:page forIndex:index];
             [_pagingScrollView addSubview:page];
             [_visiblePages addObject:page];
+            
+            if ([_delegate respondsToSelector:@selector(pagingScrollView:imageScrollView:didReuseForPageIndex:)]) {
+                [_delegate pagingScrollView:self imageScrollView:page didReuseForPageIndex:index];
+            }
             
             if (_parallaxScrollingEnabled) {
                 [_pagingScrollView bringSubviewToFront:_parallaxSeparatorView];
@@ -339,6 +348,10 @@
         if (page.pageIndex != index) {
             [_recycledPages addObject:page];
             [page removeFromSuperview];
+            
+            if ([_delegate respondsToSelector:@selector(pagingScrollView:imageScrollView:didRecycleForPageIndex:)]) {
+                [_delegate pagingScrollView:self imageScrollView:page didRecycleForPageIndex:index];
+            }
         }
     }
     [_visiblePages minusSet:_recycledPages];
@@ -357,6 +370,10 @@
         CGRect pagingBounds = _pagingScrollView.bounds;
         pagingBounds.origin.x = page.frame.origin.x - _pagePadding;
         _pagingScrollView.bounds = pagingBounds;
+        
+        if ([_delegate respondsToSelector:@selector(pagingScrollView:imageScrollView:didReuseForPageIndex:)]) {
+            [_delegate pagingScrollView:self imageScrollView:page didReuseForPageIndex:index];
+        }
     }
     
     [self setCurrentPageIndex:index];

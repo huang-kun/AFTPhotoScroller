@@ -9,7 +9,7 @@
 
 ## ScreenShots
 
-![Paging and zooming](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video1.gif)    ![Parallax Scrolling](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video2.gif)
+![Paging and zooming](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video1.gif) ======== ![Web image](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video2.gif) ======== ![Parallax Scrolling](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video3.gif)
 
 ## Introduction
 
@@ -84,7 +84,6 @@ Unlike demo app, we do not recommend loading all image resources into memory at 
 
 ## Notice
 
-- The demo app does not implement device rotation, but `AFTPhotoScroller` has encapsulated all required public APIs for supporting this. Check out documentation in `AFTPagingScrollView.h`
 - It does not supports `IBDesignable` and `IBInspectable` at this moment.
 
 ## Requirements

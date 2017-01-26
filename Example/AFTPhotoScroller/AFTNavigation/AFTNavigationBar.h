@@ -21,8 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface AFTNavigationBar : UIView
 
-- (instancetype)initWithTitle:(NSString *)title; ///< 指定初始器
-
+@property (nonatomic, copy) NSString *title; ///< 标题
 @property (nonatomic, readonly, strong) UIButton *backBarButton; ///< 导航栏的返回按钮
 @property (nullable, nonatomic, strong) UIButton *rightBarButton; ///< 导航栏的右侧按钮
 @property (nonatomic, weak) id <AFTNavigationBarDelegate> delegate; ///< 代理

@@ -15,7 +15,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self.pagingView reloadData];
 }
 

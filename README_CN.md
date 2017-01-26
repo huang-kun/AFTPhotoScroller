@@ -9,7 +9,7 @@ Check out [English README](https://github.com/huang-kun/AFTPhotoScroller/blob/ma
 
 ## 屏幕截图
 
-![翻页与图片缩放](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video1.gif)    ![视差效果](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video2.gif)
+![翻页与图片缩放](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video1.gif) ======== ![网络加载图片](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video2.gif) ======== ![视差效果](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video3.gif)
 
 ## 简介
 
@@ -84,7 +84,6 @@ Check out [English README](https://github.com/huang-kun/AFTPhotoScroller/blob/ma
 
 ## 注意
 
-- 在demo中没有实现设备转屏的适配，但是`AFTPhotoScroller`提供了所有必要的接口，相关文档请查看`AFTPagingScrollView.h`
 - 目前没有适配`IBDesignable`和`IBInspectable`
 
 

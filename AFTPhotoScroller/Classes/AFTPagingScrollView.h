@@ -80,19 +80,30 @@ typedef NS_ENUM(NSInteger, AFTPagingScrollViewNavigationOrientation) {
 /**
  Tells the delegate that when the imageScrollView enables a double-tap-to-zoom gesture for its imageView. Using this callback method for additional setup, e.g. [singleTap requireGestureRecognizerToFail:zoomingTap] (创建了双击缩放图片手势的回调，这里可以用于一些附加操作，比如调用-requireGestureRecognizerToFail:)
  
- @param imageScrollView The inner scroll view which handles the image zooming.
+ @param imageScrollView The inner scroll view which handles the image zooming. (当双击手势行为被启动时的回调)
  @param zoomingTap A double tap gesture for handle image zooming.
  */
 - (void)pagingScrollView:(AFTPagingScrollView *)pagingScrollView imageScrollView:(UIScrollView *)imageScrollView didEnableZoomingTapGesture:(UITapGestureRecognizer *)zoomingTap;
 
 /**
- Tells the delegate that when a double tap to zoom image gesture is recognized.
+ Tells the delegate that when a double tap to zoom image gesture is recognized. (当双击手势行为被识别时的回调)
 
  @param imageScrollView The inner scroll view which handles the image zooming.
  @param zoomingTap A double tap gesture for handle image zooming.
  */
 - (void)pagingScrollView:(AFTPagingScrollView *)pagingScrollView imageScrollView:(UIScrollView *)imageScrollView didRecognizeZoomingTapGesture:(UITapGestureRecognizer *)zoomingTap;
 
+/**
+ Tells the delegate that when the imageScrollView is recycled for the specified page. (当图片容器被回收时的回调)
+ @param imageScrollView The inner scroll view which handles the image zooming.
+ */
+- (void)pagingScrollView:(AFTPagingScrollView *)pagingScrollView imageScrollView:(UIScrollView *)imageScrollView didRecycleForPageIndex:(NSInteger)pageIndex;
+
+/**
+ Tells the delegate that when the imageScrollView is reused for the specified page. (当图片容器被重用时的回调)
+ @param imageScrollView The inner scroll view which handles the image zooming.
+ */
+- (void)pagingScrollView:(AFTPagingScrollView *)pagingScrollView imageScrollView:(UIScrollView *)imageScrollView didReuseForPageIndex:(NSInteger)pageIndex;
 
 @end
 
@@ -163,19 +174,19 @@ typedef NS_ENUM(NSInteger, AFTPagingScrollViewNavigationOrientation) {
 - (void)reloadData;
 
 /**
- Save current page and zooming states for device rotation.
+ Save current page and zooming states for device rotation. (在设备转向之前保存当前页码和图片缩放位置)
  @note You can call it in UIViewController's -willRotateToInterfaceOrientation:duration: or -willTransitionToTraitCollection:withTransitionCoordinator:
  */
 - (void)saveCurrentStatesForRotation;
 
 /**
- Apply tracked informations for device rotation.
+ Apply tracked informations for device rotation. (将保存的当前页码和图片缩放位置，应用给转向后的状态)
  @note You can call it in UIViewController's -willAnimateRotationToInterfaceOrientation:duration:
  */
 - (void)restoreStatesForRotation;
 
 /**
- Same as -restoreStatesForRotation.
+ Same as -restoreStatesForRotation. (将保存的当前页码和图片缩放位置，应用给转向后的状态)
  @note You can pass size from in UIViewController's -viewWillTransitionToSize:withTransitionCoordinator:
  */
 - (void)restoreStatesForRotationInSize:(CGSize)size;

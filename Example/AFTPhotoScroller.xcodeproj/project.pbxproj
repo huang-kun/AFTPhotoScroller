@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AD947331E39E6C8006FF2C3 /* AFTNetworkPagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD947321E39E6C8006FF2C3 /* AFTNetworkPagingViewController.m */; };
+		1AD947361E3A203A006FF2C3 /* AFTProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD947351E3A203A006FF2C3 /* AFTProgressBar.m */; };
 		1AFE910D1E360A9000AD5743 /* image000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE90FF1E360A9000AD5743 /* image000.jpg */; };
 		1AFE910E1E360A9000AD5743 /* image001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE91001E360A9000AD5743 /* image001.jpg */; };
 		1AFE910F1E360A9000AD5743 /* image002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AFE91011E360A9000AD5743 /* image002.jpg */; };
@@ -59,6 +61,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1AD947311E39E6C8006FF2C3 /* AFTNetworkPagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFTNetworkPagingViewController.h; sourceTree = "<group>"; };
+		1AD947321E39E6C8006FF2C3 /* AFTNetworkPagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFTNetworkPagingViewController.m; sourceTree = "<group>"; };
+		1AD947341E3A203A006FF2C3 /* AFTProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFTProgressBar.h; sourceTree = "<group>"; };
+		1AD947351E3A203A006FF2C3 /* AFTProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFTProgressBar.m; sourceTree = "<group>"; };
 		1AFE90FF1E360A9000AD5743 /* image000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image000.jpg; sourceTree = "<group>"; };
 		1AFE91001E360A9000AD5743 /* image001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image001.jpg; sourceTree = "<group>"; };
 		1AFE91011E360A9000AD5743 /* image002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image002.jpg; sourceTree = "<group>"; };
@@ -181,6 +187,10 @@
 				1AFE91261E36309600AD5743 /* AFTCustomPagingViewController.m */,
 				1AFE91281E3630AA00AD5743 /* AFTParallaxPagingViewController.h */,
 				1AFE91291E3630AA00AD5743 /* AFTParallaxPagingViewController.m */,
+				1AD947311E39E6C8006FF2C3 /* AFTNetworkPagingViewController.h */,
+				1AD947321E39E6C8006FF2C3 /* AFTNetworkPagingViewController.m */,
+				1AD947341E3A203A006FF2C3 /* AFTProgressBar.h */,
+				1AD947351E3A203A006FF2C3 /* AFTProgressBar.m */,
 			);
 			path = AFTPageViewControllers;
 			sourceTree = "<group>";
@@ -532,6 +542,8 @@
 				6003F5A7195388D20070C39A /* AFTViewController.m in Sources */,
 				1AFE91381E36377D00AD5743 /* AFTPageBar.m in Sources */,
 				1AFE912D1E3631EC00AD5743 /* AFTPagingBaseViewController.m in Sources */,
+				1AD947361E3A203A006FF2C3 /* AFTProgressBar.m in Sources */,
+				1AD947331E39E6C8006FF2C3 /* AFTNetworkPagingViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				1AFE912A1E3630AA00AD5743 /* AFTParallaxPagingViewController.m in Sources */,
 				1AFE91241E362FE600AD5743 /* AFTVerticalPagingViewController.m in Sources */,

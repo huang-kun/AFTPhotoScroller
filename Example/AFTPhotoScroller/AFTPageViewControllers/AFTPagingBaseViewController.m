@@ -33,21 +33,40 @@
     return self;
 }
 
+- (void)dealloc {
+    NSLog(@"%@ dealloc", self);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = UIColor.blackColor;
     self.automaticallyAdjustsScrollViewInsets = NO;
 
+    // single tap to show or hide navigation bar
     _singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap)];
     [self.view addGestureRecognizer:_singleTap];
     
-    _navBar = [[AFTNavigationBar alloc] initWithTitle:self.title];
+    // navigation bar
+    _navBar = [[AFTNavigationBar alloc] init];
     _navBar.delegate = self;
+    _navBar.title = self.title;
     [self.view addSubview:_navBar];
     
-    _pagingView = [[AFTPagingScrollView alloc] initWithFrame:self.view.bounds];
+    // guide button
+    UIButton *rightBarButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [rightBarButton setTitle:@"Guide" forState:UIControlStateNormal];
+    [rightBarButton addTarget:self action:@selector(handleRightBarButtonTap) forControlEvents:UIControlEventTouchUpInside];
+    _navBar.rightBarButton = rightBarButton;
+    
+    // paging view
+    _pagingView = [[AFTPagingScrollView alloc] init];
     _pagingView.delegate = self;
     _pagingView.dataSource = self;
     [self.view addSubview:_pagingView];
+    
+    // setup auto layout
+    [self setupConstraints];
+    [self.view layoutIfNeeded];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -106,6 +125,85 @@
 
 - (void)pagingScrollView:(AFTPagingScrollView *)pagingScrollView imageScrollViewWillBeginZooming:(UIScrollView *)imageScrollView atPageIndex:(NSInteger)pageIndex {
     [self hideNavigationBar];
+}
+
+#pragma mark - Rotation
+
+- (BOOL)shouldAutorotate {
+    return YES;
+}
+
+// iOS 8+
+#if (__IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0)
+
+- (void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator>)coordinator {
+    [self.pagingView saveCurrentStatesForRotation];
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    [self.pagingView restoreStatesForRotationInSize:size];
+}
+
+#else
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    [self.pagingView saveCurrentStatesForRotation];
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    [self.pagingView restoreStatesForRotation];
+}
+
+#endif // iOS Version
+
+
+#pragma mark - Auto layout
+
+- (void)setupConstraints {
+    [self setupNavigationBarConstraints];
+    [self setupPagingViewConstraints];
+}
+
+- (void)setupNavigationBarConstraints {
+    self.navBar.translatesAutoresizingMaskIntoConstraints = NO;
+    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.navBar attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0];
+    NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:self.navBar attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0.0];
+    NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:self.navBar attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1.0 constant:0.0];
+    [self.view addConstraints:@[top, left, right]];
+}
+
+- (void)setupPagingViewConstraints {
+    self.pagingView.translatesAutoresizingMaskIntoConstraints = NO;
+    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.pagingView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0];
+    NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:self.pagingView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0.0];
+    NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:self.pagingView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0];
+    NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:self.pagingView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1.0 constant:0.0];
+    [self.view addConstraints:@[top, left, bottom, right]];
+}
+
+#pragma mark - Target / Action
+
+- (void)handleRightBarButtonTap {
+    // iOS 8+
+#if (__IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0)
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Guide" message:[self guideMessage] preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [alert dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
+    
+#else
+    
+    [[[UIAlertView alloc] initWithTitle:@"Guide" message:[self guideMessage] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+    
+#endif
+    
+}
+
+- (NSString *)guideMessage {
+    return @"You can swipe between pages, single tap to hide/show navigation bar, double tap or pinch to zoom image, and rotate device if you like.";
 }
 
 @end
