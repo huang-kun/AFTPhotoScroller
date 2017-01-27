@@ -15,7 +15,7 @@
 @interface AFTPagingScrollView () <UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIScrollView *pagingScrollView;
-@property (nonatomic, strong) UIView *parallaxSeparatorView;
+@property (nonatomic, strong) UIView *parallaxSeparator;
 
 @property (nonatomic, strong) NSMutableSet *recycledPages;
 @property (nonatomic, strong) NSMutableSet *visiblePages;
@@ -41,6 +41,8 @@
     NSInteger _firstVisiblePageIndexBeforeRotation;
     CGFloat _percentScrolledIntoFirstVisiblePage;
 }
+
+#pragma mark - Life cycle
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -84,14 +86,25 @@
                                                 object:UIApplication.sharedApplication];
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    // Fix bugs for loading from interface builder (UIStoryboard)
+    // ----------------------------------------------------------
+    if (_parallaxScrollingEnabled) {
+        CGRect parallaxSeparatorFrame = _parallaxSeparator.frame;
+        parallaxSeparatorFrame.size = [self sizeForParallaxSeparator];
+        _parallaxSeparator.frame = parallaxSeparatorFrame;
+    }
+    [self saveCurrentStatesForRotation];
+    [self restoreStatesForRotation];
+    // ----------------------------------------------------------
+}
+
 #pragma mark - Accessors
 
 - (NSInteger)numberOfPages {
     return _pageCount;
-}
-
-- (CGFloat)paddingBetweenPages {
-    return _parallaxScrollingEnabled ? _parallaxPagePadding : _pagePadding;
 }
 
 - (void)setZoomingTapProgress:(CGFloat)zoomingTapProgress {
@@ -123,6 +136,14 @@
     }
 }
 
+- (void)setPaddingBetweenPages:(CGFloat)paddingBetweenPages {
+    _pagePadding = paddingBetweenPages;
+}
+
+- (CGFloat)paddingBetweenPages {
+    return _parallaxScrollingEnabled ? _parallaxPagePadding : _pagePadding;
+}
+
 #pragma mark - Reload data and build user interface
 
 - (void)reloadPageAtIndex:(NSInteger)pageIndex {
@@ -136,32 +157,25 @@
 }
 
 - (void)reloadData {
-    // reset states
+    // page count
     _pageCount = 0;
-    _pagePadding = 0;
-    _parallaxPagePadding = 20;
-    
-    // apply new values
     _pageCount = [_dataSource numberOfPagesInPagingScrollView:self];
     
     if (_pageCount < 0) {
         _pageCount = 0;
     }
     
-    if ([_delegate respondsToSelector:@selector(paddingBetweenPagesInPagingScrollView:)]) {
-        CGFloat padding = [_delegate paddingBetweenPagesInPagingScrollView:self];
-        
-        if (padding < 0) {
-            padding = 0;
-        }
-        
-        if (_parallaxScrollingEnabled) {
-            _parallaxPagePadding = padding;
-        } else {
-            _pagePadding = padding;
-        }
+    // page padding
+    if (_pagePadding < 0) {
+        _pagePadding = 0;
     }
     
+    if (_parallaxScrollingEnabled) {
+        _parallaxPagePadding = _pagePadding > 0 ? _pagePadding : 20;
+        _pagePadding = 0;
+    }
+    
+    // build interface
     for (UIView *subview in self.subviews) {
         [subview removeFromSuperview];
     }
@@ -194,25 +208,16 @@
     
     // Build parallax separator if necessary
     if (_parallaxScrollingEnabled) {
-        CGRect pagingBounds = _pagingScrollView.bounds;
         CGRect parallaxSeparatorFrame = CGRectZero;
+        parallaxSeparatorFrame.size = [self sizeForParallaxSeparator];
         
-        if ([self isHorizontalDirection]) {
-            parallaxSeparatorFrame.size.width = _parallaxPagePadding * 2;
-            parallaxSeparatorFrame.size.height = MAX(pagingBounds.size.width, pagingBounds.size.height);
-        } else {
-            parallaxSeparatorFrame.size.height = _parallaxPagePadding * 2;
-            parallaxSeparatorFrame.size.width = MAX(pagingBounds.size.width, pagingBounds.size.height);
-        }
-        
-        _parallaxSeparatorView = [[UIView alloc] initWithFrame:parallaxSeparatorFrame];
-        _parallaxSeparatorView.backgroundColor = _pagingScrollView.backgroundColor;
-        
-        [_pagingScrollView addSubview:_parallaxSeparatorView];
+        _parallaxSeparator = [[UIView alloc] initWithFrame:parallaxSeparatorFrame];
+        _parallaxSeparator.backgroundColor = _pagingScrollView.backgroundColor;
+        [_pagingScrollView addSubview:_parallaxSeparator];
         
 #if AFT_PAGING_DEBUG
-        _parallaxSeparatorView.backgroundColor = UIColor.redColor;
-        _parallaxSeparatorView.alpha = 0.5;
+        _parallaxSeparator.backgroundColor = UIColor.redColor;
+        _parallaxSeparator.alpha = 0.5;
 #endif
         
     }
@@ -320,7 +325,7 @@
             }
             
             if (_parallaxScrollingEnabled) {
-                [_pagingScrollView bringSubviewToFront:_parallaxSeparatorView];
+                [_pagingScrollView bringSubviewToFront:_parallaxSeparator];
             }
         }
     }
@@ -476,6 +481,21 @@
     return pageFrame;
 }
 
+- (CGSize)sizeForParallaxSeparator {
+    CGSize parallaxSeparatorSize = CGSizeZero;
+    CGSize pagingSize = [self frameForPagingScrollView].size;
+
+    if ([self isHorizontalDirection]) {
+        parallaxSeparatorSize.width = _parallaxPagePadding * 2;
+        parallaxSeparatorSize.height = MAX(pagingSize.width, pagingSize.height);
+    } else {
+        parallaxSeparatorSize.height = _parallaxPagePadding * 2;
+        parallaxSeparatorSize.width = MAX(pagingSize.width, pagingSize.height);
+    }
+    
+    return parallaxSeparatorSize;
+}
+
 - (CGSize)contentSizeForPagingScrollView {
     CGRect bounds = _pagingScrollView.bounds;
     CGSize size = CGSizeZero;
@@ -574,7 +594,7 @@
 
 - (void)applyParallaxScrollingEffect {
     CGRect bounds = _pagingScrollView.bounds;
-    CGRect parallaxSeparatorFrame = _parallaxSeparatorView.frame;
+    CGRect parallaxSeparatorFrame = _parallaxSeparator.frame;
 
     CGPoint offset = bounds.origin;
     CGFloat pageWidth = bounds.size.width;
@@ -596,7 +616,7 @@
         parallaxSeparatorFrame.origin.y = pageHeight * (firstPageIndex + 1) - parallaxSeparatorFrame.size.height * percentage;
     }
     
-    _parallaxSeparatorView.frame = parallaxSeparatorFrame;
+    _parallaxSeparator.frame = parallaxSeparatorFrame;
 }
 
 #pragma mark - Rotation
@@ -667,6 +687,13 @@
         
         [self restoreStatesForRotation];
     }
+}
+
+#pragma mark - Interface Builder
+
+// Quote From WWDC: This is going to be invoked on our view right before it renders into the canvas, and it's a last miniute chance for us to do any additional setup.
+- (void)prepareForInterfaceBuilder {
+    self.backgroundColor = UIColor.blackColor;
 }
 
 @end

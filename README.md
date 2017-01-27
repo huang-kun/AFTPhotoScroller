@@ -14,7 +14,7 @@
 ![Paging and zooming](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video1.gif) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Web image](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video2.gif) 
 
 
-![Parallax Scrolling](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video3.gif)
+![Parallax Scrolling1](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video3.gif)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Parallax Scrolling2](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video4.gif)
 
 ## Introduction
 
@@ -58,7 +58,7 @@ In your `UIViewController` subclass, you can simply just do this.
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     self.pagingView = [[AFTPagingScrollView alloc] initWithFrame:self.view.bounds];
-    self.pagingView.delegate = self;
+    self.paddingBetweenPages = 6;
     self.pagingView.dataSource = self;
     [self.view addSubview:self.pagingView];
     
@@ -74,12 +74,6 @@ In your `UIViewController` subclass, you can simply just do this.
 
 - (UIImage *)pagingScrollView:(AFTPagingScrollView *)pagingScrollView imageForPageAtIndex:(NSInteger)pageIndex {
     return self.images[pageIndex];
-}
-
-#pragma mark - AFTPagingScrollViewDelegate
-
-- (CGFloat)paddingBetweenPagesInPagingScrollView:(AFTPagingScrollView *)pagingScrollView {
-    return 8;
 }
 ```
 

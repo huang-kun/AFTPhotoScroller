@@ -107,10 +107,6 @@
 
 #pragma mark - AFTPagingScrollViewDelegate
 
-- (CGFloat)paddingBetweenPagesInPagingScrollView:(AFTPagingScrollView *)pagingScrollView {
-    return 8;
-}
-
 - (void)pagingScrollView:(AFTPagingScrollView *)pagingScrollView imageScrollView:(UIScrollView *)imageScrollView didEnableZoomingTapGesture:(UITapGestureRecognizer *)zoomingTap {
     [self.singleTap requireGestureRecognizerToFail:zoomingTap]; // Single tap will delay its action until double tap recognizing is failed.
 }

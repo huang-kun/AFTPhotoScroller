@@ -37,7 +37,8 @@
     // load data for paging view
     self.pagingView.dataSource = self;
     self.pagingView.delegate = self;
-    
+    self.pagingView.paddingBetweenPages = 6;
+
     [self.pagingView reloadData];
 }
 
@@ -82,7 +83,7 @@
     
     BOOL needProgress = (self.imageCache[@(pageIndex)] == nil);
     
-    // BUG
+    // BUG FIX
     if (!needProgress && [[(id)imageScrollView imageView] image] == [self placeholderImage]) {
         [pagingScrollView reloadPageAtIndex:pageIndex];
         return;

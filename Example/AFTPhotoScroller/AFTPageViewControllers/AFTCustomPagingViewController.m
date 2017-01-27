@@ -37,6 +37,7 @@
     
     
     self.pagingView.delegate = self;
+    self.pagingView.paddingBetweenPages = 6;
     [self.pagingView reloadData];
     
     [NSNotificationCenter.defaultCenter addObserver:self
@@ -72,12 +73,7 @@
 #pragma mark - Rotation
 
 - (void)handleDeviceRotation {
-    UIDeviceOrientation orientation = UIDevice.currentDevice.orientation;
-    if (orientation == UIDeviceOrientationLandscapeLeft || orientation == UIDeviceOrientationLandscapeRight) {
-        self.pageBar.hidden = YES;
-    } else {
-        self.pageBar.hidden = NO;
-    }
+    self.pageBar.hidden = UIDeviceOrientationIsLandscape(UIDevice.currentDevice.orientation);
 }
 
 @end

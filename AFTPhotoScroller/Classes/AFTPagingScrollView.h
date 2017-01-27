@@ -40,11 +40,6 @@ typedef NS_ENUM(NSInteger, AFTPagingScrollViewNavigationOrientation) {
 @optional
 
 /**
- Ask the delegate to return the horizontal padding between pages. The default value is 0. (返回页面之间的水平间距，默认值为0)
- */
-- (CGFloat)paddingBetweenPagesInPagingScrollView:(AFTPagingScrollView *)pagingScrollView;
-
-/**
  Ask the delegate if the specified page should be displayed on screen. Default is YES. (是否展示指定页面，默认值为YES)
  @warning This method will be called when the specified page is about to show on screen, and it will be called multiple times when user scrolling and constantly checking the result. For performance reason, try not to implement this method heavily. (注意该方法会在翻页过程中被多次调用，为了减少翻页卡顿，该方法的实现必须简洁轻量)
  */
@@ -108,6 +103,8 @@ typedef NS_ENUM(NSInteger, AFTPagingScrollViewNavigationOrientation) {
 @end
 
 
+#if !TARGET_INTERFACE_BUILDER
+
 @interface AFTPagingScrollView : UIView
 
 @property (nonatomic, weak) id <AFTPagingScrollViewDelegate> delegate;
@@ -117,6 +114,12 @@ typedef NS_ENUM(NSInteger, AFTPagingScrollViewNavigationOrientation) {
  The direction for page scrolling. The default value is horizontal. (翻页滑动方向，默认为水平方向)
  */
 @property (nonatomic, assign) AFTPagingScrollViewNavigationOrientation navigationOrientation;
+
+/**
+ The horizontal padding between pages. The default value is 0. (页面之间的水平间隙，默认值为0)
+ @note If parallaxScrollingEnabled is YES, then the default padding is 20. (如果parallaxScrollingEnabled为YES，那么默认值为20)
+ */
+@property (nonatomic, assign) CGFloat paddingBetweenPages;
 
 /**
  A floating-point value that specifies the maximum scale factor that can be applied to the image. The default value is 1.0 (图片的最大拉伸参数，默认为1.0)
@@ -135,7 +138,7 @@ typedef NS_ENUM(NSInteger, AFTPagingScrollViewNavigationOrientation) {
 
 /**
  Whether applying parallax scrolling effect for page scrolling just like Photo app in iOS 10. The default value is NO. (是否开启视差滚动效果，默认为NO)
- @note If YES, the default padding bewteen pages is 20.0f, which can be modified by implementing -paddingBetweenPagesInPagingScrollView: delegate method. (如果为YES，那么默认的页面视差间距为20，该间距也可以通过实现-paddingBetweenPagesInPagingScrollView:方法来修改)
+ @note If YES, the default parallax padding is 20.0f, which can be modified by paddingBetweenPages property. (如果为YES，那么默认的页面视差间距为20，该间距也可以通过修改paddingBetweenPages来实现)
  */
 @property (nonatomic, assign, getter = isParallaxScrollingEnabled) BOOL parallaxScrollingEnabled;
 
@@ -149,11 +152,6 @@ typedef NS_ENUM(NSInteger, AFTPagingScrollViewNavigationOrientation) {
  The total number of pages. (总页数)
  */
 @property (nonatomic, readonly) NSInteger numberOfPages;
-
-/**
- The horizontal padding between pages. (页面之间的水平间隙)
- */
-@property (nonatomic, readonly) CGFloat paddingBetweenPages;
 
 /**
  Jump to the specified page. (跳转到某一页)
@@ -192,5 +190,22 @@ typedef NS_ENUM(NSInteger, AFTPagingScrollViewNavigationOrientation) {
 - (void)restoreStatesForRotationInSize:(CGSize)size;
 
 @end
+
+#else // TARGET_INTERFACE_BUILDER
+
+IB_DESIGNABLE
+@interface AFTPagingScrollView : UIView
+
+@property (nonatomic, assign) IBInspectable NSInteger navigationOrientation;
+@property (nonatomic, assign) IBInspectable CGFloat paddingBetweenPages;
+@property (nonatomic, assign) IBInspectable CGFloat maximumImageZoomScale;
+@property (nonatomic, assign, getter = isZoomingTapEnabled) IBInspectable BOOL zoomingTapEnabled;
+@property (nonatomic, assign) IBInspectable CGFloat zoomingTapProgress;
+@property (nonatomic, assign, getter = isParallaxScrollingEnabled) IBInspectable BOOL parallaxScrollingEnabled;
+
+@end
+
+#endif // TARGET_INTERFACE_BUILDER
+
 
 NS_ASSUME_NONNULL_END
