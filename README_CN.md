@@ -5,7 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/AFTPhotoScroller.svg?style=flat)](http://cocoapods.org/pods/AFTPhotoScroller)
 [![Platform](https://img.shields.io/cocoapods/p/AFTPhotoScroller.svg?style=flat)](http://cocoapods.org/pods/AFTPhotoScroller)
 
+<br />
 Check out [English README](https://github.com/huang-kun/AFTPhotoScroller/blob/master/README.md) if you need.
+<br />
 
 ## 屏幕截图
 

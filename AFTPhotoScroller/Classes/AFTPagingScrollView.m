@@ -194,12 +194,15 @@
     
     // Build parallax separator if necessary
     if (_parallaxScrollingEnabled) {
-        CGRect parallaxSeparatorFrame = _pagingScrollView.bounds;
+        CGRect pagingBounds = _pagingScrollView.bounds;
+        CGRect parallaxSeparatorFrame = CGRectZero;
         
         if ([self isHorizontalDirection]) {
             parallaxSeparatorFrame.size.width = _parallaxPagePadding * 2;
+            parallaxSeparatorFrame.size.height = MAX(pagingBounds.size.width, pagingBounds.size.height);
         } else {
             parallaxSeparatorFrame.size.height = _parallaxPagePadding * 2;
+            parallaxSeparatorFrame.size.width = MAX(pagingBounds.size.width, pagingBounds.size.height);
         }
         
         _parallaxSeparatorView = [[UIView alloc] initWithFrame:parallaxSeparatorFrame];
@@ -599,15 +602,23 @@
 #pragma mark - Rotation
 
 - (void)saveCurrentStatesForRotation {
-    CGFloat offset = _pagingScrollView.contentOffset.x;
-    CGFloat pageWidth = _pagingScrollView.bounds.size.width;
+    CGFloat offset = 0;
+    CGFloat pageLength = 0;
+    
+    if ([self isHorizontalDirection]) {
+        offset = _pagingScrollView.contentOffset.x;
+        pageLength = _pagingScrollView.bounds.size.width;
+    } else {
+        offset = _pagingScrollView.contentOffset.y;
+        pageLength = _pagingScrollView.bounds.size.height;
+    }
     
     if (offset >= 0) {
-        _firstVisiblePageIndexBeforeRotation = floorf(offset / pageWidth);
-        _percentScrolledIntoFirstVisiblePage = (offset - (_firstVisiblePageIndexBeforeRotation * pageWidth)) / pageWidth;
+        _firstVisiblePageIndexBeforeRotation = floorf(offset / pageLength);
+        _percentScrolledIntoFirstVisiblePage = (offset - (_firstVisiblePageIndexBeforeRotation * pageLength)) / pageLength;
     } else {
         _firstVisiblePageIndexBeforeRotation = 0;
-        _percentScrolledIntoFirstVisiblePage = offset / pageWidth;
+        _percentScrolledIntoFirstVisiblePage = offset / pageLength;
     }
 }
 
@@ -627,9 +638,22 @@
     }
     
     // adjust contentOffset to preserve page location based on values collected prior to location
-    CGFloat pageWidth = _pagingScrollView.bounds.size.width;
-    CGFloat newOffset = (_firstVisiblePageIndexBeforeRotation * pageWidth) + (_percentScrolledIntoFirstVisiblePage * pageWidth);
-    _pagingScrollView.contentOffset = CGPointMake(newOffset, 0);
+    CGPoint contentOffset = CGPointZero;
+    
+    if ([self isHorizontalDirection]) {
+        CGFloat pageWidth = _pagingScrollView.bounds.size.width;
+        contentOffset.x = (_firstVisiblePageIndexBeforeRotation * pageWidth) + (_percentScrolledIntoFirstVisiblePage * pageWidth);
+    } else {
+        CGFloat pageHeight = _pagingScrollView.bounds.size.height;
+        contentOffset.y = (_firstVisiblePageIndexBeforeRotation * pageHeight) + (_percentScrolledIntoFirstVisiblePage * pageHeight);
+    }
+    
+    _pagingScrollView.contentOffset = contentOffset;
+    
+    // adjust position for parallax bar
+    if (_parallaxScrollingEnabled) {
+        [self applyParallaxScrollingEffect];
+    }
 }
 
 - (void)restoreStatesForRotationInSize:(CGSize)size {

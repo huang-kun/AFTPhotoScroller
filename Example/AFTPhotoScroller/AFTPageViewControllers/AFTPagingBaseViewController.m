@@ -166,28 +166,38 @@
 
 - (void)setupNavigationBarConstraints {
     self.navBar.translatesAutoresizingMaskIntoConstraints = NO;
+    
     NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.navBar attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0];
     NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:self.navBar attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0.0];
     NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:self.navBar attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1.0 constant:0.0];
+    
     [self.view addConstraints:@[top, left, right]];
 }
 
 - (void)setupPagingViewConstraints {
     self.pagingView.translatesAutoresizingMaskIntoConstraints = NO;
+    
     NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.pagingView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0];
     NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:self.pagingView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0.0];
     NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:self.pagingView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0];
     NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:self.pagingView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1.0 constant:0.0];
+    
     [self.view addConstraints:@[top, left, bottom, right]];
 }
 
 #pragma mark - Target / Action
 
 - (void)handleRightBarButtonTap {
+    [self showAlertWithTitle:@"Guide" message:@"You can swipe between pages, single tap to hide/show navigation bar, double tap or pinch to zoom image, and rotate device if you like."];
+}
+
+#pragma mark - Alert
+
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {
     // iOS 8+
 #if (__IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0)
     
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Guide" message:[self guideMessage] preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [alert dismissViewControllerAnimated:YES completion:nil];
     }];
@@ -196,14 +206,9 @@
     
 #else
     
-    [[[UIAlertView alloc] initWithTitle:@"Guide" message:[self guideMessage] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+    [[[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
     
 #endif
-    
-}
-
-- (NSString *)guideMessage {
-    return @"You can swipe between pages, single tap to hide/show navigation bar, double tap or pinch to zoom image, and rotate device if you like.";
 }
 
 @end

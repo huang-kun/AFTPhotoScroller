@@ -30,4 +30,7 @@
 /// Hide navigation bar if needed with fade out animation.
 - (void)hideNavigationBar;
 
+/// Show simple alert view.
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message;
+
 @end

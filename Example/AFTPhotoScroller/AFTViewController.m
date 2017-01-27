@@ -76,10 +76,9 @@
 #pragma mark - Helper
 
 - (NSArray *)items {
-    return @[ @"Normal pages",
+    return @[ @"Regular pages",
               @"Vertical pages",
               @"Custom pages",
-              @"Parallax pages",
               @"Network pages" ];
 }
 
@@ -87,7 +86,6 @@
     return @[ @"AFTNormalPagingViewController",
               @"AFTVerticalPagingViewController",
               @"AFTCustomPagingViewController",
-              @"AFTParallaxPagingViewController",
               @"AFTNetworkPagingViewController" ];
 }
 
