@@ -5,10 +5,6 @@
 [![License](https://img.shields.io/cocoapods/l/AFTPhotoScroller.svg?style=flat)](http://cocoapods.org/pods/AFTPhotoScroller)
 [![Platform](https://img.shields.io/cocoapods/p/AFTPhotoScroller.svg?style=flat)](http://cocoapods.org/pods/AFTPhotoScroller)
 
-<br />
-Check out [English README](https://github.com/huang-kun/AFTPhotoScroller/blob/master/README.md) if you need.
-<br />
-
 ## 屏幕截图
 
 ![Paging and zooming](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video1.gif) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Web image](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video2.gif) 
@@ -17,6 +13,9 @@ Check out [English README](https://github.com/huang-kun/AFTPhotoScroller/blob/ma
 ![Parallax Scrolling1](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video3.gif)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Parallax Scrolling2](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video4.gif)
 
 ## 简介
+
+Check out [English README](https://github.com/huang-kun/AFTPhotoScroller/blob/master/README.md) if you need.
+<br />
 
 `AFTPhotoScroller`是一个简单且灵活的照片浏览组件，其实现了iOS照片app的基本功能。
 
@@ -80,11 +79,6 @@ Check out [English README](https://github.com/huang-kun/AFTPhotoScroller/blob/ma
 建议下载github demo，这个demo展示了创建几种不同类型的照片浏览，并且附赠了底部页码条和导航栏的push动画。
 
 当然真正的app中，我们不建议像demo一样一次性加载所有图片到内存中去。
-
-## 注意
-
-- 目前没有适配`IBDesignable`和`IBInspectable`
-
 
 ## 最低系统要求
 

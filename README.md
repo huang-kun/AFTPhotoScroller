@@ -5,10 +5,6 @@
 [![License](https://img.shields.io/cocoapods/l/AFTPhotoScroller.svg?style=flat)](http://cocoapods.org/pods/AFTPhotoScroller)
 [![Platform](https://img.shields.io/cocoapods/p/AFTPhotoScroller.svg?style=flat)](http://cocoapods.org/pods/AFTPhotoScroller)
 
-<br />
-[中文介绍请戳这里](https://github.com/huang-kun/AFTPhotoScroller/blob/master/README_CN.md)
-<br />
-
 ## ScreenShots
 
 ![Paging and zooming](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video1.gif) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Web image](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video2.gif) 
@@ -17,6 +13,9 @@
 ![Parallax Scrolling1](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video3.gif)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Parallax Scrolling2](https://github.com/huang-kun/AFTPhotoScroller/blob/master/video4.gif)
 
 ## Introduction
+
+[中文介绍请戳这里](https://github.com/huang-kun/AFTPhotoScroller/blob/master/README_CN.md)
+<br />
 
 `AFTPhotoScroller` is a simple and flexible solution for implementing a photo scroller with the basic functionality in iOS photo app. 
 
@@ -80,10 +79,6 @@ In your `UIViewController` subclass, you can simply just do this.
 The demo app is available for downloading. It is showing how to build different photo scrollers by `AFTPhotoScroller`. It works well with other UI component like custom bottom page bar. The demo is using presented navigation bar with push animation instead of real `UINavigationController`.
 
 Unlike demo app, we do not recommend loading all image resources into memory at once in real project.
-
-## Notice
-
-- It does not supports `IBDesignable` and `IBInspectable` at this moment.
 
 ## Requirements
 
