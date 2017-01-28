@@ -57,8 +57,8 @@ Check out [English README](https://github.com/huang-kun/AFTPhotoScroller/blob/ma
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     self.pagingView = [[AFTPagingScrollView alloc] initWithFrame:self.view.bounds];
-    self.paddingBetweenPages = 6;
     self.pagingView.dataSource = self;
+    self.pagingView.paddingBetweenPages = 6;
     [self.view addSubview:self.pagingView];
     
     self.images = ... // load images
@@ -91,6 +91,12 @@ AFTPhotoScroller可以通过[CocoaPods](http://cocoapods.org)进行安装。只�
 ```ruby
 pod "AFTPhotoScroller"
 ```
+
+## 致谢
+
+- WWDC的demo [PhotoScroller](https://github.com/robertwalker/PhotoScroller)(ARC版)
+- Demo中的本地图片摘自[MJParallaxCollectionView](https://github.com/mayuur/MJParallaxCollectionView)，源于[unsplash](http://unsplash.com)
+- Demo中的网络图片摘自[YYKit](https://github.com/ibireme/YYKit)，源于[dribbble](https://dribbble.com/snootyfox)
 
 ## 作者
 

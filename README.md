@@ -57,8 +57,8 @@ In your `UIViewController` subclass, you can simply just do this.
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     self.pagingView = [[AFTPagingScrollView alloc] initWithFrame:self.view.bounds];
-    self.paddingBetweenPages = 6;
     self.pagingView.dataSource = self;
+    self.pagingView.paddingBetweenPages = 6;
     [self.view addSubview:self.pagingView];
     
     self.images = ... // load images
@@ -92,6 +92,12 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "AFTPhotoScroller"
 ```
+
+## Thanks
+
+- WWDC Sample Code - [PhotoScroller](https://github.com/robertwalker/PhotoScroller)(ARC version).
+- The local image resources are from [unsplash](http://unsplash.com) in [MJParallaxCollectionView](https://github.com/mayuur/MJParallaxCollectionView).
+- The web image resources are from [dribbble](https://dribbble.com/snootyfox) in [YYKit](https://github.com/ibireme/YYKit).
 
 ## Author
 
