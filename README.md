@@ -14,7 +14,7 @@
 
 ## Introduction
 
-- Check out Chinese version of README if you need, just click [中文介绍请戳这里](https://github.com/huang-kun/AFTPhotoScroller/blob/master/README_CN.md)
+- [中文介绍请戳这里](https://github.com/huang-kun/AFTPhotoScroller/blob/master/README_CN.md)
 
 <br />
 

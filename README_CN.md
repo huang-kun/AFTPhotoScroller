@@ -14,7 +14,7 @@
 
 ## 简介
 
-- 此处为英文版的[README](https://github.com/huang-kun/AFTPhotoScroller/blob/master/README.md)
+- [点击进入英文版README](https://github.com/huang-kun/AFTPhotoScroller/blob/master/README.md)
 
 <br />
 
@@ -36,7 +36,7 @@
 - 开启或禁用双击放大或缩小图片的手势
 - 给双击手势设置图片放大的尺度，即双击后图片放大效果与最大效果的比例
 - 支持垂直方向的翻页
-- 支持**视差效果** (体验类似iOS 10的照片app，如需简单了解什么是“视差滑动(Parallax Scrolling)”，可以参考[这篇博客](http://huang-kun.github.io/2017/01/28/Parallax-Scrolling/)) 
+- 支持**视差效果** (体验类似iOS 10的照片app，如需简单了解什么是“视差滑动(Parallax Scrolling)”，可以参考[这篇博客](https://huang-kun.github.io/2017/01/28/Parallax-Scrolling/)) 
 
 允许开发者订制的交互回调如下：
 
