@@ -14,7 +14,8 @@
 
 ## Introduction
 
-[中文介绍请戳这里](https://github.com/huang-kun/AFTPhotoScroller/blob/master/README_CN.md)
+- Check out Chinese version of README if you need, just click [中文介绍请戳这里](https://github.com/huang-kun/AFTPhotoScroller/blob/master/README_CN.md)
+
 <br />
 
 `AFTPhotoScroller` is a simple and flexible solution for implementing a photo scroller with the basic functionality in iOS photo app. 
@@ -35,7 +36,7 @@ There are a lot of details for you to customize:
 - Enable / disable the double tap gesture to zoom image
 - Set zooming progress to determine how far a double tap can zoom.
 - Vertical paging direction support
-- **Parallax Scrolling** support (like photo app in iOS 10)
+- **Parallax Scrolling** support (like photo app in iOS 10. Check out wikipedia for the concept of [Parallax Scrolling](https://en.wikipedia.org/wiki/Parallax_scrolling) if you like)
 
 There are a lot of control flows for you to customize:
 
@@ -47,8 +48,10 @@ There are a lot of control flows for you to customize:
 
 ## Demo
 
-First, `#import <AFTPhotoScroller/AFTPagingScrollView.h>`
+#### Objective-C
 
+First, install `AFTPhotoScroller`.
+Then `#import <AFTPhotoScroller/AFTPhotoScroller.h>`
 In your `UIViewController` subclass, you can simply just do this.
 
 ```
@@ -73,6 +76,47 @@ In your `UIViewController` subclass, you can simply just do this.
 
 - (UIImage *)pagingScrollView:(AFTPagingScrollView *)pagingScrollView imageForPageAtIndex:(NSInteger)pageIndex {
     return self.images[pageIndex];
+}
+```
+
+#### Swift
+
+First, install `AFTPhotoScroller` (**MUST `use_frameworks!` in Podfile**)
+Then `import AFTPhotoScroller`
+In your `UIViewController` subclass, you can simply just do this.
+
+```
+import UIKit
+import AFTPhotoScroller
+
+class ViewController: UIViewController, AFTPagingScrollViewDataSource {
+    
+    var pagingView: AFTPagingScrollView!
+    var images: [UIImage]!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        pagingView = AFTPagingScrollView(frame:view.bounds)
+        pagingView.isParallaxScrollingEnabled = true
+        pagingView.dataSource = self
+        view.addSubview(pagingView)
+        
+        images = loadAllImages()
+        pagingView.reloadData()
+    }
+
+    public func numberOfPages(in pagingScrollView: AFTPagingScrollView) -> Int {
+        return images.count
+    }
+    
+    public func pagingScrollView(_ pagingScrollView: AFTPagingScrollView, imageForPageAt pageIndex: Int) -> UIImage {
+        return images[pageIndex]
+    }
+
+    func loadAllImages() -> [UIImage] {
+        ....
+    }
 }
 ```
 

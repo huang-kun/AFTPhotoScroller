@@ -14,7 +14,8 @@
 
 ## 简介
 
-Check out [English README](https://github.com/huang-kun/AFTPhotoScroller/blob/master/README.md) if you need.
+- 此处为英文版的[README](https://github.com/huang-kun/AFTPhotoScroller/blob/master/README.md)
+
 <br />
 
 `AFTPhotoScroller`是一个简单且灵活的照片浏览组件，其实现了iOS照片app的基本功能。
@@ -35,7 +36,7 @@ Check out [English README](https://github.com/huang-kun/AFTPhotoScroller/blob/ma
 - 开启或禁用双击放大或缩小图片的手势
 - 给双击手势设置图片放大的尺度，即双击后图片放大效果与最大效果的比例
 - 支持垂直方向的翻页
-- 支持**视差效果** (体验类似iOS 10的照片app)
+- 支持**视差效果** (体验类似iOS 10的照片app，如需简单了解什么是“视差滑动(Parallax Scrolling)”，可以参考[这篇博客](http://huang-kun.github.io/2017/01/28/Parallax-Scrolling/)) 
 
 允许开发者订制的交互回调如下：
 
@@ -47,8 +48,10 @@ Check out [English README](https://github.com/huang-kun/AFTPhotoScroller/blob/ma
 
 ## 示例
 
-首先，`#import <AFTPhotoScroller/AFTPagingScrollView.h>`
+#### Objective-C
 
+首先，安装`AFTPhotoScroller`。
+接着`#import <AFTPhotoScroller/AFTPagingScrollView.h>`
 在`UIViewController`子类中，只需要简单的加入以下代码即可：
 
 ```
@@ -73,6 +76,47 @@ Check out [English README](https://github.com/huang-kun/AFTPhotoScroller/blob/ma
 
 - (UIImage *)pagingScrollView:(AFTPagingScrollView *)pagingScrollView imageForPageAtIndex:(NSInteger)pageIndex {
     return self.images[pageIndex];
+}
+```
+
+#### Swift
+
+首先安装`AFTPhotoScroller` (**必须在Podfile中写明`use_frameworks!`**)
+接着`import AFTPhotoScroller`
+在`UIViewController`子类中，只需要简单的加入以下代码即可：
+
+```
+import UIKit
+import AFTPhotoScroller
+
+class ViewController: UIViewController, AFTPagingScrollViewDataSource {
+    
+    var pagingView: AFTPagingScrollView!
+    var images: [UIImage]!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        pagingView = AFTPagingScrollView(frame:view.bounds)
+        pagingView.isParallaxScrollingEnabled = true
+        pagingView.dataSource = self
+        view.addSubview(pagingView)
+        
+        images = loadAllImages()
+        pagingView.reloadData()
+    }
+
+    public func numberOfPages(in pagingScrollView: AFTPagingScrollView) -> Int {
+        return images.count
+    }
+    
+    public func pagingScrollView(_ pagingScrollView: AFTPagingScrollView, imageForPageAt pageIndex: Int) -> UIImage {
+        return images[pageIndex]
+    }
+
+    func loadAllImages() -> [UIImage] {
+        ....
+    }
 }
 ```
 
