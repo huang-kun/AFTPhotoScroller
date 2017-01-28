@@ -50,8 +50,8 @@
 
 #### Objective-C
 
-首先，安装`AFTPhotoScroller`。
-接着`#import <AFTPhotoScroller/AFTPagingScrollView.h>`
+首先安装`AFTPhotoScroller`；
+接着`#import <AFTPhotoScroller/AFTPhotoScroller.h>`；
 在`UIViewController`子类中，只需要简单的加入以下代码即可：
 
 ```
