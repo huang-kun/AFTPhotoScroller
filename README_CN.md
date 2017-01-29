@@ -50,10 +50,8 @@
 
 相比官方或其他的照片翻页库，在什么情况下选择`AFTPhotoScroller`会更有优势呢？
 
-- 有图片翻页浏览的需求，类似相册
-- 在翻页中支持横竖屏切换的需求，或者上下翻页的需求
 - 有视差效果的需求（该框架允许通过设置paddingBetweenPages属性来实现对视差明显程度的控制）
-- 有其他特殊需求，导致使用官方的`UIPageViewController`或者其他带有controller的开源库比较不容易做深度修改，比如像demo中使用自己写的导航栏、在底部添加自己写的页码条、或者需要网络获取图片等等；`AFTPhotoScroller`能够在很大程度上满足开发者根据自己的需求订制图片翻页，因此该框架本身没有包含controller，理念是留给开发者根据需要来构建自己想要的controller。
+- 有特殊业务需求，导致使用官方的`UIPageViewController`或者其他带有controller的开源库比较不容易做深度修改，比如像demo中使用自己写的导航栏、在底部添加自己写的页码条、或者需要网络获取图片等等；`AFTPhotoScroller`能够在很大程度上满足开发者根据自己的需求订制图片翻页，因此**该框架本身没有包含controller，只有一个`AFTPagingScrollView`可供使用，理念是留给开发者根据需要来构建自己想要的controller**
 - 使用`AFTPagingScrollView`和使用`UITableView`的感觉，基本是一样的，因此容易上手。
 
 ## 示例
