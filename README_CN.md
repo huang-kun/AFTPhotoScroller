@@ -24,7 +24,7 @@
 
 就像经典的照片浏览框架一样，`AFTPhotoScroller`能够实现用户左右翻页图片和对单个图片的放大缩小，不仅如此，它的特性还包含其他方面：
 
-#### 移除Controller的设计
+#### 理念 - 无Controller
 
 不像`UIPageViewController`，在`AFTPhotoScroller`提供的接口中没有controller，而直接是采用一个叫`AFTPagingScrollView`翻页视图来做照片浏览，这样的话，开发者就可以自己个性化订制自己的controller，这就好比直接使用`UITableView`而非`UITableViewController`的好处一样。它同样实现了`UIPageViewController`自带的页面重用机制、页面间的间距计算、以及做最少量的缓存管理等等，但是不能够实现真实的纸张翻页效果(page curl)和书脊位置(spine location)。
 
@@ -46,14 +46,14 @@
 - 获取翻页、缩放手势和双击手势的初始状态
 - 获取页面即将完全展示的回调 (即一个页面占据大于屏幕一半位置的时候)
 
-#### 推荐AFTPhotoScroller的理由
+## 推荐AFTPhotoScroller的理由
 
 相比官方或其他的照片翻页库，在什么情况下选择`AFTPhotoScroller`会更有优势呢？
 
 - 有图片翻页浏览的需求，类似相册
-- 有支持横竖屏切换的需求，或者上下翻页的需求
-- 有视觉效果的需求（该框架允许通过调整间距大小来实现对视差明显程度的控制）
-- 有特殊需求，导致使用官方的`UIPageViewController`或者其他带有controller的开源库比较不容易做深度修改，比如像demo中使用自己写的导航栏、在底部添加自己写的页码条、或者需要网络获取图片等等；`AFTPhotoScroller`能够在很大程度上满足开发者根据自己的需求订制图片翻页，因此该框架本身没有包含controller，理念是留给开发者根据需要来构建自己想要的controller。
+- 在翻页中支持横竖屏切换的需求，或者上下翻页的需求
+- 有视差效果的需求（该框架允许通过设置paddingBetweenPages属性来实现对视差明显程度的控制）
+- 有其他特殊需求，导致使用官方的`UIPageViewController`或者其他带有controller的开源库比较不容易做深度修改，比如像demo中使用自己写的导航栏、在底部添加自己写的页码条、或者需要网络获取图片等等；`AFTPhotoScroller`能够在很大程度上满足开发者根据自己的需求订制图片翻页，因此该框架本身没有包含controller，理念是留给开发者根据需要来构建自己想要的controller。
 - 使用`AFTPagingScrollView`和使用`UITableView`的感觉，基本是一样的，因此容易上手。
 
 ## 示例
