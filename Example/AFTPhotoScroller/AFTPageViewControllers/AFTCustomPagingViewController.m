@@ -9,6 +9,8 @@
 #import "AFTCustomPagingViewController.h"
 #import "AFTPageBar.h"
 
+#define AFT_CUSTOM_PAGE_COLOR [UIColor colorWithRed:0.220 green:0.286 blue:0.361 alpha:1.00]
+
 @interface AFTCustomPagingViewController () <AFTPagingScrollViewDelegate, AFTPageBarDataSource, AFTPageBarDelegate>
 @property (nonatomic, strong) AFTPageBar *pageBar;
 @property (nonatomic, assign) BOOL didPopAlert;
@@ -39,12 +41,17 @@
     
     self.pagingView.delegate = self;
     self.pagingView.paddingBetweenPages = 6;
+    self.pagingView.backgroundColor = AFT_CUSTOM_PAGE_COLOR;
     [self.pagingView reloadData];
     
     [NSNotificationCenter.defaultCenter addObserver:self
                                            selector:@selector(handleDeviceRotation)
                                                name:UIDeviceOrientationDidChangeNotification
                                              object:UIDevice.currentDevice];
+}
+
+- (void)updatePagingBackgroundColor {
+    self.pagingView.backgroundColor = self.navBar.alpha > 0 ? UIColor.whiteColor : AFT_CUSTOM_PAGE_COLOR;
 }
 
 - (void)dealloc {
@@ -61,6 +68,18 @@
 
 - (BOOL)pagingScrollView:(AFTPagingScrollView *)pagingScrollView shouldDisplayPageAtIndex:(NSInteger)pageIndex {
     return [self shouldDisplayPageAtIndex:pageIndex];
+}
+
+- (void)pagingScrollViewWillBeginPaging:(AFTPagingScrollView *)pagingScrollView {
+    [self hideNavigationBar];
+}
+
+- (void)pagingScrollView:(AFTPagingScrollView *)pagingScrollView imageScrollViewDidScrollImage:(UIScrollView *)imageScrollView atPageIndex:(NSInteger)pageIndex {
+    [self hideNavigationBar];
+}
+
+- (void)pagingScrollView:(AFTPagingScrollView *)pagingScrollView imageScrollViewWillBeginZooming:(UIScrollView *)imageScrollView atPageIndex:(NSInteger)pageIndex {
+    [self hideNavigationBar];
 }
 
 #pragma mark - AFTPageBarDataSource
@@ -96,7 +115,7 @@
             NSString *message = [NSString stringWithFormat:@"You can't see page %@.", @(forbiddenPageIndex)];
             
             __weak typeof(self) _self = self;
-            [self showAlertWithTitle:@"Stop" message:message dismissed:^{
+            [self showAlertWithTitle:@"Oops" message:message dismissed:^{
                 __strong typeof(_self) self = _self;
                 self.didPopAlert = NO;
             }];

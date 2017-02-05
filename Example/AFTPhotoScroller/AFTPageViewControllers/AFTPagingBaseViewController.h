@@ -34,4 +34,7 @@
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message;
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message dismissed:(void(^)(void))dismissed;
 
+/// Update background color. Default is white / black.
+- (void)updatePagingBackgroundColor;
+
 @end

@@ -94,11 +94,7 @@
 }
 
 - (void)updatePagingBackgroundColor {
-    if (self.navBar.alpha > 0) {
-        self.pagingView.backgroundColor = UIColor.whiteColor;
-    } else {
-        self.pagingView.backgroundColor = UIColor.blackColor;
-    }
+    self.pagingView.backgroundColor = self.navBar.alpha > 0 ? UIColor.whiteColor : UIColor.blackColor;
 }
 
 #pragma mark - AFTNavigationBarDelegate
@@ -121,18 +117,6 @@
 
 - (void)pagingScrollView:(AFTPagingScrollView *)pagingScrollView imageScrollView:(UIScrollView *)imageScrollView didEnableZoomingTapGesture:(UITapGestureRecognizer *)zoomingTap {
     [self.singleTap requireGestureRecognizerToFail:zoomingTap]; // Single tap will delay its action until double tap recognizing is failed.
-}
-
-- (void)pagingScrollViewWillBeginPaging:(AFTPagingScrollView *)pagingScrollView {
-    [self hideNavigationBar];
-}
-
-- (void)pagingScrollView:(AFTPagingScrollView *)pagingScrollView imageScrollViewDidScrollImage:(UIScrollView *)imageScrollView atPageIndex:(NSInteger)pageIndex {
-    [self hideNavigationBar];
-}
-
-- (void)pagingScrollView:(AFTPagingScrollView *)pagingScrollView imageScrollViewWillBeginZooming:(UIScrollView *)imageScrollView atPageIndex:(NSInteger)pageIndex {
-    [self hideNavigationBar];
 }
 
 #pragma mark - Rotation
