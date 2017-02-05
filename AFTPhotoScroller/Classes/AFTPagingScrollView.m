@@ -376,7 +376,13 @@
         
         // Jump to specified page without calling -scrollViewDidScroll: method
         CGRect pagingBounds = _pagingScrollView.bounds;
-        pagingBounds.origin.x = page.frame.origin.x - _pagePadding;
+        
+        if ([self isHorizontalDirection]) {
+            pagingBounds.origin.x = page.frame.origin.x - _pagePadding;
+        } else {
+            pagingBounds.origin.y = page.frame.origin.y - _pagePadding;
+        }
+        
         _pagingScrollView.bounds = pagingBounds;
         
         if ([_delegate respondsToSelector:@selector(pagingScrollView:imageScrollView:didReuseForPageIndex:)]) {
