@@ -201,7 +201,6 @@ void *kAFTPagingScrollViewKVOContext = &kAFTPagingScrollViewKVOContext;
     CGRect pagingScrollViewFrame = [self frameForPagingScrollView];
     
     _pagingScrollView = [[UIScrollView alloc] initWithFrame:pagingScrollViewFrame];
-    _pagingScrollView.backgroundColor = [UIColor blackColor];
     _pagingScrollView.pagingEnabled = YES;
     _pagingScrollView.showsVerticalScrollIndicator = NO;
     _pagingScrollView.showsHorizontalScrollIndicator = NO;
@@ -225,7 +224,6 @@ void *kAFTPagingScrollViewKVOContext = &kAFTPagingScrollViewKVOContext;
         parallaxSeparatorFrame.size = [self sizeForParallaxSeparator];
         
         _parallaxSeparator = [[UIView alloc] initWithFrame:parallaxSeparatorFrame];
-        _parallaxSeparator.backgroundColor = _pagingScrollView.backgroundColor;
         [_pagingScrollView addSubview:_parallaxSeparator];
         
 #if AFT_PAGING_DEBUG
@@ -234,6 +232,9 @@ void *kAFTPagingScrollViewKVOContext = &kAFTPagingScrollViewKVOContext;
 #endif
         
     }
+    
+    // Update background color
+    [self updateBackgroundColor:self.backgroundColor];
     
     // Display first page
     [self tilePages];
@@ -562,6 +563,15 @@ void *kAFTPagingScrollViewKVOContext = &kAFTPagingScrollViewKVOContext;
     return _navigationOrientation == AFTPagingScrollViewNavigationOrientationVertical;
 }
 
+- (void)updateBackgroundColor:(UIColor *)color {
+    _pagingScrollView.backgroundColor = color;
+    _parallaxSeparator.backgroundColor = color;
+    
+    for (AFTImageScrollView *page in _visiblePages) {
+        page.backgroundColor = color;
+    }
+}
+
 #pragma mark - Image Cache
 
 - (void)updateImageCache {
@@ -709,10 +719,7 @@ void *kAFTPagingScrollViewKVOContext = &kAFTPagingScrollViewKVOContext;
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     if (context == kAFTPagingScrollViewKVOContext && [keyPath isEqualToString:@"backgroundColor"]) {
         UIColor *newColor = change[NSKeyValueChangeNewKey];
-        self.parallaxSeparator.backgroundColor = newColor;
-        for (AFTImageScrollView *page in self.visiblePages) {
-            page.backgroundColor = newColor;
-        }
+        [self updateBackgroundColor:newColor];
     }
 }
 
