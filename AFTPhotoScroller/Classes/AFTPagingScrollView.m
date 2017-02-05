@@ -12,13 +12,16 @@
 #define AFT_PAGING_DEBUG 0
 #define AFT_PAGING_IMAGE_CACHE_LOG 0
 
+void *kAFTPagingScrollViewKVOContext = &kAFTPagingScrollViewKVOContext;
+
+
 @interface AFTPagingScrollView () <UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIScrollView *pagingScrollView;
 @property (nonatomic, strong) UIView *parallaxSeparator;
 
-@property (nonatomic, strong) NSMutableSet *recycledPages;
-@property (nonatomic, strong) NSMutableSet *visiblePages;
+@property (nonatomic, strong) NSMutableSet <AFTImageScrollView *> *recycledPages;
+@property (nonatomic, strong) NSMutableSet <AFTImageScrollView *> *visiblePages;
 
 @property (nonatomic, assign) NSInteger currentPageIndex;
 @property (nonatomic, assign) NSInteger nextPageIndex;
@@ -30,9 +33,9 @@
 
 @implementation AFTPagingScrollView {
     
-    NSInteger _pageCount;           // numberOfPages
+    NSInteger _pageCount;
     
-    CGFloat _pagePadding;           // paddingBetweenPages
+    CGFloat _pagePadding;
     CGFloat _parallaxPagePadding;
     
     CGPoint _lastContentOffset;
@@ -40,6 +43,7 @@
     
     NSInteger _firstVisiblePageIndexBeforeRotation;
     CGFloat _percentScrolledIntoFirstVisiblePage;
+    
 }
 
 #pragma mark - Life cycle
@@ -78,12 +82,21 @@
                                            selector:@selector(removeImageCache)
                                                name:UIApplicationDidReceiveMemoryWarningNotification
                                              object:UIApplication.sharedApplication];
+    
+    [self addObserver:self
+           forKeyPath:@"backgroundColor"
+              options:NSKeyValueObservingOptionNew
+              context:kAFTPagingScrollViewKVOContext];
 }
 
 - (void)dealloc {
     [NSNotificationCenter.defaultCenter removeObserver:self
                                                   name:UIApplicationDidReceiveMemoryWarningNotification
                                                 object:UIApplication.sharedApplication];
+    
+    [self removeObserver:self
+              forKeyPath:@"backgroundColor"
+                 context:kAFTPagingScrollViewKVOContext];
 }
 
 - (void)layoutSubviews {
@@ -421,6 +434,7 @@
 - (void)configurePage:(AFTImageScrollView *)page forIndex:(NSInteger)index {
     page.pageIndex = index;
     page.frame = [self frameForPageAtIndex:index];
+    page.backgroundColor = self.backgroundColor;
     
     UIImage *image = _imageCache[@(index)];
     if (!image) {
@@ -428,11 +442,6 @@
         _imageCache[@(index)] = image;
     }
     [page displayImage:image];
-    
-#if AFT_PAGING_DEBUG
-    page.backgroundColor = UIColor.lightGrayColor;
-#endif
-    
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -692,6 +701,18 @@
         _pagingScrollView.bounds = bounds;
         
         [self restoreStatesForRotation];
+    }
+}
+
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if (context == kAFTPagingScrollViewKVOContext && [keyPath isEqualToString:@"backgroundColor"]) {
+        UIColor *newColor = change[NSKeyValueChangeNewKey];
+        self.parallaxSeparator.backgroundColor = newColor;
+        for (AFTImageScrollView *page in self.visiblePages) {
+            page.backgroundColor = newColor;
+        }
     }
 }
 
