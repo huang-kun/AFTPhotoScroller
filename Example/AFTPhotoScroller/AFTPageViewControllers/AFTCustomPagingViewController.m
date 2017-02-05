@@ -11,6 +11,7 @@
 
 @interface AFTCustomPagingViewController () <AFTPagingScrollViewDelegate, AFTPageBarDataSource, AFTPageBarDelegate>
 @property (nonatomic, strong) AFTPageBar *pageBar;
+@property (nonatomic, assign) BOOL didPopAlert;
 @end
 
 @implementation AFTCustomPagingViewController
@@ -58,6 +59,10 @@
     [self.pageBar highlightButtonAtPageIndex:pageIndex];
 }
 
+- (BOOL)pagingScrollView:(AFTPagingScrollView *)pagingScrollView shouldDisplayPageAtIndex:(NSInteger)pageIndex {
+    return [self shouldDisplayPageAtIndex:pageIndex];
+}
+
 #pragma mark - AFTPageBarDataSource
 
 - (NSInteger)numberOfPagesInPageBar:(AFTPageBar *)pageBar {
@@ -70,10 +75,33 @@
     [self.pagingView displayPageAtIndex:pageIndex];
 }
 
+- (BOOL)pageBar:(AFTPageBar *)pageBar shouldSelectPageAtIndex:(NSInteger)pageIndex {
+    return [self shouldDisplayPageAtIndex:pageIndex];
+}
+
 #pragma mark - Rotation
 
 - (void)handleDeviceRotation {
     self.pageBar.hidden = UIDeviceOrientationIsLandscape(UIDevice.currentDevice.orientation);
+}
+
+#pragma mark - Helper
+
+- (BOOL)shouldDisplayPageAtIndex:(NSInteger)pageIndex {
+    const NSInteger forbiddenPageIndex = 2;
+    if (pageIndex == forbiddenPageIndex && !self.didPopAlert) {
+        self.didPopAlert = YES;
+        NSString *message = [NSString stringWithFormat:@"You can't see page %@.", @(forbiddenPageIndex)];
+        
+        __weak typeof(self) _self = self;
+        [self showAlertWithTitle:@"Stop" message:message dismissed:^{
+            __strong typeof(_self) self = _self;
+            self.didPopAlert = NO;
+        }];
+        
+        return NO;
+    }
+    return YES;
 }
 
 @end

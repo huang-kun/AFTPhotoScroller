@@ -32,5 +32,6 @@
 
 /// Show simple alert view.
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message;
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message dismissed:(void(^)(void))dismissed;
 
 @end

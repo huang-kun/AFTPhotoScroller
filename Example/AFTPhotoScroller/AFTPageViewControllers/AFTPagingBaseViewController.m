@@ -9,10 +9,11 @@
 #import "AFTPagingBaseViewController.h"
 #import "AFTPushAnimatedTransitioning.h"
 
-@interface AFTPagingBaseViewController ()
+@interface AFTPagingBaseViewController () <UIAlertViewDelegate>
 @property (nonatomic, strong) AFTPagingScrollView *pagingView;
 @property (nonatomic, strong) AFTNavigationBar *navBar;
 @property (nonatomic, strong) AFTPushAnimatedTransitioning *pushTransitioning;
+@property (nonatomic, copy) void(^dismissBlock)(void);
 @end
 
 @implementation AFTPagingBaseViewController
@@ -190,21 +191,33 @@
 #pragma mark - Alert
 
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {
+    [self showAlertWithTitle:title message:message dismissed:nil];
+}
+
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message dismissed:(void(^)(void))dismissed {
     // iOS 8+
 #if (__IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0)
     
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [alert dismissViewControllerAnimated:YES completion:nil];
+        if (dismissed) dismissed();
     }];
     [alert addAction:cancel];
     [self presentViewController:alert animated:YES completion:nil];
     
 #else
     
-    [[[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+    self.dismissBlock = dismissed;
+    [[[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
     
 #endif
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0 && self.dismissBlock) {
+        self.dismissBlock();
+    }
 }
 
 @end
