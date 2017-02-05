@@ -89,15 +89,18 @@
 
 - (BOOL)shouldDisplayPageAtIndex:(NSInteger)pageIndex {
     const NSInteger forbiddenPageIndex = 2;
-    if (pageIndex == forbiddenPageIndex && !self.didPopAlert) {
-        self.didPopAlert = YES;
-        NSString *message = [NSString stringWithFormat:@"You can't see page %@.", @(forbiddenPageIndex)];
-        
-        __weak typeof(self) _self = self;
-        [self showAlertWithTitle:@"Stop" message:message dismissed:^{
-            __strong typeof(_self) self = _self;
-            self.didPopAlert = NO;
-        }];
+    if (pageIndex == forbiddenPageIndex) {
+        if (!self.didPopAlert) {
+            self.didPopAlert = YES;
+            
+            NSString *message = [NSString stringWithFormat:@"You can't see page %@.", @(forbiddenPageIndex)];
+            
+            __weak typeof(self) _self = self;
+            [self showAlertWithTitle:@"Stop" message:message dismissed:^{
+                __strong typeof(_self) self = _self;
+                self.didPopAlert = NO;
+            }];
+        }
         
         return NO;
     }

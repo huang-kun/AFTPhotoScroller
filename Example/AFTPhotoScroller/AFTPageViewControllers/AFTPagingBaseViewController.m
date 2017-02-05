@@ -61,6 +61,7 @@
     
     // paging view
     _pagingView = [[AFTPagingScrollView alloc] init];
+    _pagingView.backgroundColor = UIColor.whiteColor;
     _pagingView.delegate = self;
     _pagingView.dataSource = self;
     [self.view addSubview:_pagingView];
@@ -78,6 +79,7 @@
 - (void)handleSingleTap {
     [UIView animateWithDuration:0.2 animations:^{
         self.navBar.alpha = (CGFloat)!(BOOL)self.navBar.alpha;
+        [self updatePagingBackgroundColor];
     }];
 }
 
@@ -87,7 +89,16 @@
     }
     [UIView animateWithDuration:0.2 animations:^{
         self.navBar.alpha = 0;
+        [self updatePagingBackgroundColor];
     }];
+}
+
+- (void)updatePagingBackgroundColor {
+    if (self.navBar.alpha > 0) {
+        self.pagingView.backgroundColor = UIColor.whiteColor;
+    } else {
+        self.pagingView.backgroundColor = UIColor.blackColor;
+    }
 }
 
 #pragma mark - AFTNavigationBarDelegate
