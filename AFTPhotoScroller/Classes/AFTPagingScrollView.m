@@ -160,9 +160,9 @@ void *kAFTPagingScrollViewKVOContext = &kAFTPagingScrollViewKVOContext;
 #pragma mark - Reload data and build user interface
 
 - (void)reloadPageAtIndex:(NSInteger)pageIndex {
+    _imageCache[@(pageIndex)] = nil;
     for (AFTImageScrollView *page in _visiblePages) {
         if (page.pageIndex == pageIndex) {
-            _imageCache[@(pageIndex)] = nil;
             [self configurePage:page forIndex:pageIndex];
             break;
         }
